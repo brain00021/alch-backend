@@ -1,0 +1,28 @@
+.content-wrapper {
+    padding: 70px 1rem 0;
+}
+
+.card-frame {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: .2rem .2rem .3rem .1rem $box-shadow;
+    border-radius: .5rem;
+    background-color: $card-bg;
+}
+
+.top-info {
+
+    .bread-comb {
+        color: $bread-comb;
+        font-size: 1rem;
+        float: left;
+    }
+    .rating {
+    	width: 30%;
+        color: $rating-color;
+        border: 1px solid $rating-color;
+        border-radius: 5px;
+    	float:right;
+    }
+}
