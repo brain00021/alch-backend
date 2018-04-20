@@ -53,23 +53,149 @@ ul, li {
 
 .card-frame {
   width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  -webkit-box-shadow: 0.2rem 0.2rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
-  box-shadow: 0.2rem 0.2rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
   border-radius: .5rem;
   background-color: #fff; }
+  .card-frame p {
+    margin: 0 0 .5rem;
+    line-height: 1.2; }
 
 .top-info .bread-comb {
   color: #b8b9b9;
   font-size: 1rem;
+  line-height: 3.5rem;
   float: left; }
 
 .top-info .rating {
-  width: 30%;
+  width: 15rem;
   color: #52d3aa;
   border: 1px solid #52d3aa;
   border-radius: 5px;
-  float: right; }
+  float: right;
+  padding-left: 1rem; }
+  .top-info .rating .rating-level {
+    padding-left: 1rem;
+    font-weight: bold;
+    font-size: larger; }
+
+.view-all {
+  color: #3f95ea;
+  float: right;
+  font-size: 1.2rem;
+  line-height: 4rem;
+  cursor: pointer; }
+  .view-all:hover, .view-all :active, .view-all :focus {
+    color: #f7941d; }
+
+.currunt-loan h6 {
+  color: #7b7b7b;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+.currunt-loan .day-left {
+  color: #b8b9b9;
+  font-size: 1.2rem; }
+  .currunt-loan .day-left span {
+    color: #52d3aa;
+    font-size: 1.6rem;
+    font-weight: bolder;
+    padding: 0 5px; }
+
+.pie-box {
+  text-align: center; }
+
+.pie-chart {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#52d3aa), to(#3f95ea));
+  background: -webkit-linear-gradient(#52d3aa, #3f95ea);
+  background: -o-linear-gradient(#52d3aa, #3f95ea);
+  background: linear-gradient(#52d3aa, #3f95ea);
+  position: relative;
+  margin: 3rem auto; }
+  .pie-chart.gt-50 {
+    background: #f7941d; }
+
+.pc-progress {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 10rem);
+  top: calc(50% - 10rem);
+  width: 20rem;
+  height: 20rem;
+  clip: rect(0, 20rem, 20rem, 10rem); }
+  .pc-progress .pc-progress-fill {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - 10rem);
+    top: calc(50% - 10rem);
+    width: 20rem;
+    height: 20rem;
+    clip: rect(0, 10rem, 20rem, 0);
+    background-color: #f7941d;
+    -webkit-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    transform: rotate(60deg); }
+  .gt-50 .pc-progress {
+    clip: rect(0, 10rem, 20rem, 0); }
+    .gt-50 .pc-progress .pc-progress-fill {
+      clip: rect(0, 20rem, 20rem, 10rem);
+      background: -webkit-gradient(linear, left top, left bottom, from(#52d3aa), to(#3f95ea));
+      background: -webkit-linear-gradient(#52d3aa, #3f95ea);
+      background: -o-linear-gradient(#52d3aa, #3f95ea);
+      background: linear-gradient(#52d3aa, #3f95ea); }
+
+.pc-info {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 15.38462rem/2);
+  top: calc(50% - 15.38462rem/2);
+  width: 15.38462rem;
+  height: 15.38462rem;
+  background: #fff;
+  text-align: center;
+  display: table; }
+  .pc-info .goal,
+  .pc-info .current {
+    color: #7b7b7b;
+    padding-bottom: .1rem;
+    margin-top: .5rem; }
+  .pc-info .goal-amount {
+    color: #3f95ea;
+    font-size: 3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    line-height: 1;
+    margin-top: .5rem; }
+  .pc-info .current-amount {
+    color: #f7941d;
+    font-size: 2.6rem;
+    line-height: 1;
+    margin-top: .5rem; }
+
+.percents-wrapper {
+  display: table-cell;
+  vertical-align: middle; }
+
+.announce-content h6 {
+  color: #7b7b7b;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+.announce-content .announ-list .date {
+  width: 100%;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+.announce-content .announ-list li p:first-child {
+  color: #52d3aa; }
+
+.announce-content .announ-list li:last-child .date {
+  border-bottom: none; }
 
 /*# sourceMappingURL=alchemy_style.css.map */

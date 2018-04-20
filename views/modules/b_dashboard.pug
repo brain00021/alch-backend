@@ -1,19 +1,31 @@
 block content
 	.top-info
-		.bread-comb Borrower / Dashboard
-		.rating My Rating
-			span A1
+		.row
+			.col-sm-6
+				.bread-comb Borrower / Dashboard
+			.col-sm-6
+				.rating My Rating
+					span.rating-level A1
 	.row
-		.col-md-6
+		.col-md-4.col-sm-4
 			.card-frame.currunt-loan
-				h5 Current Loan Total
+				h6 Current Loan Total
 				.pie-box
-					.pie-chart
-					.day-left Day Left: 20days
-		.col-md-6
+					.pie-chart(data-percent="10")
+						.pc-progress
+							.pc-progress-fill
+						.pc-info
+							.goal GOAL
+							.goal-amount $2000.00
+							.current Current Total
+							.current-amount $200.00
+					.day-left Day Left:
+						span 20
+						|days
+		.col-md-4.col-sm-4
 			.card-frame.announce-content
-				h5 Announcement
-				span.view-all View All
+				h6 Announcement
+					a.view-all View All
 				ul.announ-list
 					li 
 						p Alchemy services will temporarily close for system maintenance
