@@ -9,9 +9,14 @@
   <link rel="stylesheet" type="text/css" href="../public/css/alchemy_style.css">
   <body>
     <header>
-      <div class="navbar"></div>
+      <div class="header-nav-wrapper">
+        <div id="mob-nav-icon"><span></span><span></span><span></span><span></span></div>
+        <div class="customer-icon"></div>
+      </div>
+      <div class="sidenav" id="alch-back"><a href="#">Dashboard</a><a href="#">Start a New Loan</a><a href="#">My Loan</a><a href="#">Setting</a></div>
     </header>
-    <div class="container-fluid">
+    <div class="mob-header-bg"></div>
+    <div class="container-fluid js-container-wrapper">
       <div class="top-info">
         <div class="row">
           <div class="col-sm-6">
@@ -24,17 +29,23 @@
       </div>
       <div class="row">
         <div class="col-md-4 col-sm-12">
-          <div class="card-frame currunt-invest">
+          <div class="card-frame current-invest">
             <h6>The Current Investment</h6>
-            <ul class="invest-total">
-              <li> Total:</li>
-              <li> $3000</li>
-            </ul>
-            <ul class="invest-detail">
-              <li> Invested Project:<span>3</span></li>
-              <li> Average annual interest rate:<span>7%</span></li>
-              <li> Estimated expiry rate of return:<span>14.85%</span></li>
-            </ul>
+            <div class="row">
+              <div class="col-sm-6">
+                <ul class="invest-total">
+                  <li> Total:</li>
+                  <li> $30,000.67</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <ul class="invest-detail">
+                  <li> Invested Project:<span>3</span></li>
+                  <li> Average annual interest rate:<span>7%</span></li>
+                  <li> Estimated expiry rate of return:<span>14.85%</span></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-md-4 col-sm-6">
@@ -42,44 +53,45 @@
             <h6>Last Transaction<a class="view-all">View All</a></h6>
             <div class="transaction-table">
               <div class="t-head">
-                <div class="t-row">
-                  <div>Type</div>
-                  <div>Status</div>
-                  <div>Amount</div>
-                </div>
-                <div class="t-row">
-                  <div class="cashIn">Cash In</div>
+                <div>Type</div>
+                <div>Status</div>
+                <div>Amount</div>
+              </div>
+              <div class="t-body">
+                <div class="t-row cashIn">
+                  <div>Cash In
+                    <div class="date">2017-12-11</div>
+                  </div>
                   <div class="pending"></div>
                   <div>$30540</div>
-                  <div colspan="3">2017-12-11 13:22:22</div>
                 </div>
-                <div class="t-row">
-                  <div class="cashIn">Cash In</div>
+                <div class="t-row cashIn">
+                  <div>Cash In
+                    <div class="date">2017-12-11</div>
+                  </div>
                   <div class="confirm"></div>
                   <div>$51100</div>
                 </div>
-                <div class="t-row">
-                  <div colspan="3">2017-12-11 13:22:22</div>
-                </div>
-                <div class="t-row">
-                  <div class="cashIn">Cash In</div>
+                <div class="t-row cashIn">
+                  <div>Cash In
+                    <div class="date">2017-12-11</div>
+                  </div>
                   <div class="confirm"></div>
                   <div>$53300.11</div>
                 </div>
-                <div class="t-row">
-                  <div colspan="3">2017-12-11 13:22:22</div>
-                </div>
-                <div class="t-row">
-                  <div class="cashOut">Cash Out</div>
+                <div class="t-row cashOut">
+                  <div>Cash Out
+                    <div class="date">2017-12-11</div>
+                  </div>
                   <div class="pending"></div>
                   <div>$50880.32</div>
-                  <div2017-12-11>13:22:22</div2017-12-11>
                 </div>
-                <div class="t-row">
-                  <div class="cashIn">Cash In</div>
+                <div class="t-row cashIn">
+                  <div>Cash In
+                    <div class="date">2017-12-11</div>
+                  </div>
                   <div class="confirm"></div>
                   <div>$51100.45</div>
-                  <div>2017-12-11 13:22:22</div>
                 </div>
               </div>
             </div>

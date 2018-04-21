@@ -170,6 +170,8 @@ ul, li {
   box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
   border-radius: .5rem;
   background-color: #fff; }
+  .card-frame h6 {
+    color: #7b7b7b; }
   .card-frame p {
     margin: 0 0 .5rem;
     line-height: 1.2; }
@@ -204,7 +206,6 @@ ul, li {
   color: #3f95ea;
   float: right;
   font-size: 1.2rem;
-  line-height: 4rem;
   cursor: pointer; }
   .view-all:hover, .view-all :active, .view-all :focus {
     color: #f7941d; }
@@ -271,7 +272,6 @@ header {
     font-size: 18px; } }
 
 .currunt-loan h6 {
-  color: #7b7b7b;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
 .currunt-loan .day-left {
@@ -362,42 +362,125 @@ header {
   display: table-cell;
   vertical-align: middle; }
 
-.last-transaction tbody tr:nth-child(odd) td {
-  font-size: 2.5rem;
-  padding-bottom: 0; }
+.current-invest h6 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
-.last-transaction tbody tr:nth-child(even) td {
-  border-top: none;
-  font-size: 1.2rem;
-  padding: .2rem;
-  text-align: left;
-  color: rgba(0, 0, 0, 0.5); }
+.current-invest .invest-total li:last-child {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #3f95ea; }
 
-.last-transaction tbody tr:last-child td {
-  border-bottom: 1px solid #ddd; }
+.current-invest .invest-detail {
+  border-left: 1px solid #7c7c7c;
+  padding-left: 1rem; }
+  .current-invest .invest-detail li {
+    margin-bottom: 10px; }
+  @media only screen and (max-width: 768px) {
+    .current-invest .invest-detail {
+      border-left: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      margin: 10px 0 0;
+      padding: 10px 0 0; } }
 
-.last-transaction tbody td.cashIn {
-  color: #31c193; }
-  .last-transaction tbody td.cashIn:before {
+.current-invest li {
+  color: #acacac;
+  line-height: 1.3; }
+  .current-invest li span {
+    padding-left: 5px;
+    font-weight: 600; }
+
+.transaction-table .t-head {
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+.transaction-table .t-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .transaction-table .t-body .t-row {
+    width: 100%;
+    padding: .5rem 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    .transaction-table .t-body .t-row > div {
+      min-width: 33%;
+      -ms-flex-item-align: center;
+      align-self: center; }
+    .transaction-table .t-body .t-row > div:first-child {
+      font-size: 2rem; }
+      @media only screen and (max-width: 500px) {
+        .transaction-table .t-body .t-row > div:first-child {
+          font-size: 1.8rem;
+          line-height: 1.3; } }
+    .transaction-table .t-body .t-row > div:last-child {
+      font-size: 2.5rem;
+      text-align: right; }
+      @media only screen and (max-width: 500px) {
+        .transaction-table .t-body .t-row > div:last-child {
+          font-size: 2rem;
+          line-height: 1.3; } }
+  .transaction-table .t-body .date {
+    font-size: 1.2rem;
+    padding: 0 .2rem;
+    line-height: 1;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.5); }
+  .transaction-table .t-body .cashIn {
+    color: #31c193; }
+    .transaction-table .t-body .cashIn > div:first-child {
+      color: #31c193; }
+      .transaction-table .t-body .cashIn > div:first-child:before {
+        font-family: "Glyphicons Halflings";
+        content: "\e027";
+        position: relative;
+        left: -5px;
+        top: 3px; }
+  .transaction-table .t-body .cashOut {
+    color: #187cde; }
+    .transaction-table .t-body .cashOut > div:first-child:before {
+      font-family: "Glyphicons Halflings";
+      content: "\e026";
+      position: relative;
+      left: -5px;
+      top: 3px; }
+  .transaction-table .t-body .pending:before {
     font-family: "Glyphicons Halflings";
-    content: "\e027"; }
-
-.last-transaction tbody td.cashOut {
-  color: #187cde; }
-  .last-transaction tbody td.cashOut:before {
+    content: "\e023";
+    position: relative;
+    left: calc(50% - 2rem);
+    font-size: 3rem;
+    color: #848484; }
+  .transaction-table .t-body .confirm:before {
     font-family: "Glyphicons Halflings";
-    content: "\e026"; }
-
-.last-transaction tbody td.pending {
-  background: url("../images/pending.png") 1rem center no-repeat;
-  background-size: 3rem; }
-
-.last-transaction tbody td.confirm {
-  background: url("../images/confirm.png") 1rem center no-repeat;
-  background-size: 3rem; }
+    content: "\e089";
+    position: relative;
+    left: calc(50% - 2rem);
+    font-size: 3rem;
+    color: #f7814d; }
+  .transaction-table .t-body .error:before {
+    font-family: "Glyphicons Halflings";
+    content: "\e088";
+    position: relative;
+    left: calc(50% - 2rem);
+    font-size: 3rem;
+    color: #ec2e14; }
 
 .announce-content h6 {
-  color: #7b7b7b;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
 .announce-content .announ-list .date {
