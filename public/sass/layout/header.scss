@@ -1,10 +1,19 @@
+.grandient-bg {
+    position: fixed;
+    display: block;
+    @include size(100%, 100%);
+    top: 0;
+    left: 0;
+    z-index: 2;
+    @include alch-gradient();
+}
 header{
     font-family: "Lato",sans-serif;
-     position: fixed;
-     z-index:99;
-     width:100%;
-     box-shadow: 0px 0px 10px rgba(#000,0.2);
-    @include alch-gradient();
+    position: fixed;
+    z-index:99;
+    width:100%;
+    top:0;
+    box-shadow: 0px 0px 10px rgba(#000,0.2);
     @include pie-clearfix;
     .sidenav {
         height: 100%;
@@ -12,26 +21,25 @@ header{
         position: fixed;
         top: 0;
         left: -250px;
-        background-color: #111;
         overflow-x: hidden;
         transition: 0.5s;
-        background:url('../images/full_image_2.jpg') no-repeat center center;
         background-size:cover;
-        &::after{
-            content:'';
-            display: block;
-            @include size(100%,100%);
-            position: absolute;
-            top:0;
-            left:0;
-            opacity: 0.7;
-            @include alch-gradient();
-        }
+        // &::after{
+        //     content:'';
+        //     display: block;
+        //     @include size(100%,100%);
+        //     position: absolute;
+        //     top:0;
+        //     left:0;
+        //     opacity: .9;
+        //     @include alch-gradient();
+        // }
     }
     .header-nav-wrapper{
         padding:5px;
         position: relative;
         transition: all 0.5s ease;
+        left:0;
         @include pie-clearfix;
     }
     .sidenav>a {
@@ -99,12 +107,19 @@ header{
     transition: background-color .5s;
     z-index: 98;
     display: none;
+    top:0;
+    left:0;
 }
 .js-container-wrapper{
-    transition: all 0.5s ease;
+    transition:left 0.5s ease;
+    left:0;
     position: relative;
     overflow: hidden;
-    padding-top:60px;
+    margin-top:50px;
+    padding-top:10px;
+    z-index:50;
+    min-height: 95vh;
+    background:#f5fcfc;
 }
 
 //客服ICON + 選單ICON
@@ -171,13 +186,23 @@ header{
             display:block;
             padding:10px;
             color:#999999;
+            &:hover{
+                background:rgba(#000,0.2);
+                text-decoration: none;
+                color:#fff;
+            }
         }
     }
 
 }
 @media screen and (min-width:1024px){
+header{
+    box-shadow: 0 0 0 #000;
+    background-color:transparent;
+}
 header .sidenav {
     left:0 !important;
+    background-color:transparent;
 }
 #mob-nav-icon{
     display: none;
@@ -187,9 +212,13 @@ header .sidenav {
 }
 
 }
-@media screen and (max-height: 450px) {
+@media screen and (max-width: 1023px) {
+    .header-nav-wrapper{
+         @include alch-gradient();
+    }
     .sidenav {
         padding-top: 15px;
+        @include alch-gradient();
     }
     .sidenav a {
         font-size: 1.8rem;
