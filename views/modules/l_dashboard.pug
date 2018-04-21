@@ -39,35 +39,67 @@ block content
                         div Status
                         div Amount
                     .t-body
-                        .t-row.cashIn
+                        .t-row.cashIn(data-toggle="collapse" href="#detail-1")
                             div Cash In
                                 .date 2017-12-11
                             div.pending
                             div $30540
-                            
-                        .t-row.cashIn
+                        ul#detail-1.collapse
+                            li Time: 2017-12-11 10:08:08
+                            li Status:Pending
+                            li Total: $315
+                            li Borrower: Amile Chang
+                            li.switch(data-toggle="collapse" href="#detail-1")
+                                i.glyphicon.glyphicon-menu-up
+                        .t-row.cashIn(data-toggle="collapse" href="#detail-2")
                             div Cash In
                                 .date 2017-12-11
                             div.confirm
                             div $51100
-                        .t-row.cashIn
+                        ul#detail-2.collapse
+                            li Time: 2017-12-11 10:08:08
+                            li Status:Pending
+                            li Total: $315
+                            li Borrower: Amile Chang
+                            li.switch(data-toggle="collapse" href="#detail-2")
+                                i.glyphicon.glyphicon-menu-up
+                        .t-row.cashIn(data-toggle="collapse" href="#detail-3")
                             div Cash In
                                 .date 2017-12-11
                             div.confirm
                             div $53300.11
-                           
-                        .t-row.cashOut
+                        ul#detail-3.collapse
+                            li Time: 2017-12-11 10:08:08
+                            li Status:Pending
+                            li Total: $315
+                            li Borrower: Amile Chang
+                            li.switch(data-toggle="collapse" href="#detail-3")
+                                i.glyphicon.glyphicon-menu-up
+                        .t-row.cashOut.collapse(data-toggle="collapse" href="#detail-4")
                             div Cash Out
                                 .date 2017-12-11
                             div.pending
                             div $50880.32
-                           
-                        .t-row.cashIn
+                        ul#detail-4.collapse
+                            li Time: 2017-12-11 10:08:08
+                            li Status:Pending
+                            li Total: $315
+                            li Borrower: Amile Chang
+                            li.switch(data-toggle="collapse" href="#detail-4")
+                                i.glyphicon.glyphicon-menu-up
+                        .t-row.cashIn(data-toggle="collapse" href="#detail-5")
                             div Cash In
                                 .date 2017-12-11
                             div.confirm
                             div $51100.45
-                           
+                        ul#detail-5.collapse
+                            li Time: 2017-12-11 10:08:08
+                            li Status:Pending
+                            li Total: $315
+                            li Borrower: Amile Chang
+                            li.switch(data-toggle="collapse" href="#detail-5")
+                                span.glyphicon.glyphicon-menu-up
+
 
         .col-md-4.col-sm-6
             .card-frame.announce-content

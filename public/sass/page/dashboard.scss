@@ -145,6 +145,11 @@ $size: 20rem;
             display: flex;
             justify-content: space-between;
             border-bottom: 1px solid $under-line;
+            background-color:none;
+            &:hover{
+                background-color:darken($formhead-bg,3%);
+                cursor: pointer;
+            }
             >div{
                 min-width:33%;
                 align-self: center;
@@ -227,6 +232,22 @@ $size: 20rem;
                 color: $error;
 
             }
+        }
+    }
+}
+ul[id^=detail]{
+    width: 100%;
+    padding: 0 2rem;
+    margin-top: 3px;
+    background-color: lighten($form-hover,10%);
+    border-radius: 5px;
+    .switch{
+        text-align: center;
+        font-size: large;
+        border-top: 1px solid $form-hover;
+        color: $form-label;
+        &:hover{
+            color: lighten(#27bdbe,5%);
         }
     }
 }

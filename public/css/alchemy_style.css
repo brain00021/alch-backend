@@ -416,7 +416,11 @@ header {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: none; }
+    .transaction-table .t-body .t-row:hover {
+      background-color: #eeeeee;
+      cursor: pointer; }
     .transaction-table .t-body .t-row > div {
       min-width: 33%;
       -ms-flex-item-align: center;
@@ -479,6 +483,20 @@ header {
     left: calc(50% - 2rem);
     font-size: 3rem;
     color: #ec2e14; }
+
+ul[id^=detail] {
+  width: 100%;
+  padding: 0 2rem;
+  margin-top: 3px;
+  background-color: #ecf2f2;
+  border-radius: 5px; }
+  ul[id^=detail] .switch {
+    text-align: center;
+    font-size: large;
+    border-top: 1px solid #cddedd;
+    color: #8a9bb3; }
+    ul[id^=detail] .switch:hover {
+      color: #2bd2d3; }
 
 .announce-content h6 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
