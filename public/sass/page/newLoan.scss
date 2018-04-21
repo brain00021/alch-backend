@@ -1,0 +1,71 @@
+.newloan-nav {
+    min-height: 70px;
+    background-color: $newLoan-nav-bg;
+    display: flex;
+    counter-reset: section;
+    justify-content: center;
+    align-items: stretch;
+    li {
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        margin: 0 auto;
+        line-height: 1.2;
+        color: $gray-title;
+        &:before {
+            counter-increment: section;
+            content: counter(section);
+            display: inline-block;
+            margin-right: 5px;
+            text-align: center;
+            background: #fff;
+            width: 3rem;
+            border-radius: .9rem;
+            border: 1px solid #7b7b7b;
+            color: #7b7b7b;
+        }
+        &.active {
+            background-color: $newLoan-nav-bg;
+            color: $green;
+            &:before {
+                background: $orange;
+                color: #eee;
+                border: none;
+            }
+        }
+    } // @media only screen and (max-width:768px) {
+    //     display: block;
+    //     text-align: center;
+    //     li {
+    //         width: 50%;
+    //         float: left;
+    //     }
+    // }
+}
+
+.newloan-form {
+    h6 {
+        color: $blue;
+    }
+    label {
+        width: 100%;
+        color: $form-label;
+        font-size: 1.2rem;
+        span {
+            color: indianred;
+        }
+    }
+    input {
+        border: none;
+        border-bottom: 1px solid $form-line;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .form-control:focus{
+        border-color: $green;
+        box-shadow: none;
+    }
+}
+:-ms-input-placeholder,::-moz-placeholder,:-moz-placeholder,::-webkit-input-placeholder{
+    color:#b5faf5;
+}

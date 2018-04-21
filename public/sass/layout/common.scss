@@ -2,6 +2,7 @@
 .content-wrapper {
     padding: 70px 1rem 0;
 }
+
 //白色的底
 .card-frame {
     width: 100%;
@@ -10,53 +11,94 @@
     box-shadow: .1rem .1rem .3rem .1rem $box-shadow;
     border-radius: .5rem;
     background-color: $card-bg;
-    h6{
+    h6 {
         color: $gray-title;
     }
-    p{
+    p {
         margin: 0 0 .5rem;
         line-height: 1.2;
     }
 }
+
 //每頁開頭的麵包
 .top-info {
     .breadcrumb {
-        background-color:inherit;
+        background-color: inherit;
         font-size: 1.2rem;
         line-height: 3.5rem;
         float: left;
-        margin:0;
+        margin: 0;
         padding: 0;
-        a{
+        a {
             color: $breadcrumb;
         }
     }
     .rating {
-    	width: 15rem;
+        width: 15rem;
         color: $rating-color;
         border: 1px solid $rating-color;
         border-radius: 5px;
-        float:right;
-        padding-left:1rem;
-        img{
+        float: right;
+        padding-left: 1rem;
+        img {
             width: 2rem;
             height: auto;
             margin-right: 10px;
         }
-        .rating-level{
-            padding-left:1rem;
+        .rating-level {
+            padding-left: 1rem;
             font-weight: bold;
             font-size: larger;
         }
     }
 }
+
 //就是 view all
-.view-all{
+.view-all {
     color: $blue;
     float: right;
     font-size: 1.2rem;
     cursor: pointer;
-    &:hover,:active,:focus{
+    &:hover,
+    :active,
+    :focus {
         color: $orange;
     }
+}
+
+.form-btn {
+    width: 80%;
+    margin: 20px auto;
+    button {
+        width: 39%;
+        min-width: 100px;
+        padding: 10px;
+        margin: 20px 5%;
+        font-size: 1.5rem;
+    }
+    .btn {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: 0.3s;
+        &:hover,
+        &:active,
+        &:focus {
+            background: lighten($blue,10%) !important;
+            color: #fff;
+            outline: none !important;
+        }
+    }
+    .btn-alch {
+        background: $blue;
+        color: #fff;
+        border: none !important;
+        border: 2px solid transparent !important;
+        &:hover,
+        &:active,
+        &:focus {
+            box-shadow: none;
+            background: $blue;
+        }
+    }
+
 }

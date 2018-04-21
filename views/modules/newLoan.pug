@@ -1,0 +1,38 @@
+block content
+    .top-info
+        .row
+            .col-sm-6
+                ol.breadcrumb
+                    li
+                        a(href="#") Borrower
+                    li
+                        a(href="#") Start a New Loan
+    .row
+        .col-sm-8.col-xs-12
+            .card-frame.newloan-form
+                h6 Personal Details
+                .form-group
+                    label Name
+                        span *
+                        input.form-control(type="text",placeholder="First Name")
+                        input.form-control(type="text",placeholder="Last Name")
+                    label Home Address
+                        span *
+                        input.form-control(type="text",placeholder="Address 1")
+                        input.form-control(type="text",placeholder="Address 2")
+                        input.form-control(type="text",placeholder="City")
+                        input.form-control(type="text",placeholder="State/Province")
+                        input.form-control(type="text",placeholder="Zip/Postal Code")
+                        input.form-control(type="text",placeholder="Country")
+                    label Phone
+                        span *
+                        input.form-control(type="text",placeholder="")
+                    label Date of Birth
+                        span *
+                        input.form-control(type="text",placeholder="")
+                    label Monthly Income(Including Allowence)
+                        span *
+                        input.form-control(type="text",placeholder="")
+                .form-btn
+                    button.btn.btn-alch Previous
+                    button.btn.btn-alch Next
