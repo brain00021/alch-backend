@@ -7,7 +7,7 @@ $body-bg:#f5fcfc;
 
 $card-bg:#fff;
 
-$bread-comb:#b8b9b9;
+$breadcrumb:#b8b9b9;
 $gray-title:#7b7b7b;
 $rating-color:$green;
 
@@ -20,6 +20,9 @@ $date-text:rgba(0, 0, 0,.5);
 
 $content-text:#2c2c2c;
 $box-shadow:rgba(0, 0, 0,.2); 
+
+$cashIn:darken($green,10%);
+$cashOut:darken($blue,10%);
 
 $under-line:rgba(0, 0, 0,.1);
 $new-badge:#3faefb;
