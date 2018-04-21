@@ -220,12 +220,11 @@ header {
     overflow-x: hidden;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
-    transition: 0.5s;
-    padding-top: 60px; }
+    transition: 0.5s; }
   header .header-nav-wrapper {
     padding: 5px; }
   header .sidenav a {
-    padding: 8px 8px 8px 32px;
+    padding: 8px 8px 8px 10px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
