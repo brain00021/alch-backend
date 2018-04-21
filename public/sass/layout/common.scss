@@ -17,11 +17,16 @@
 }
 //每頁開頭的麵包
 .top-info {
-    .bread-comb {
-        color: $bread-comb;
-        font-size: 1rem;
+    .breadcrumb {
+        background-color:inherit;
+        font-size: 1.2rem;
         line-height: 3.5rem;
         float: left;
+        margin:0;
+        padding: 0;
+        a{
+            color: $breadcrumb;
+        }
     }
     .rating {
     	width: 15rem;
@@ -30,6 +35,11 @@
         border-radius: 5px;
         float:right;
         padding-left:1rem;
+        img{
+            width: 2rem;
+            height: auto;
+            margin-right: 10px;
+        }
         .rating-level{
             padding-left:1rem;
             font-weight: bold;

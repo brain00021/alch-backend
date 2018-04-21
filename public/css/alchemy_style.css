@@ -174,11 +174,15 @@ ul, li {
     margin: 0 0 .5rem;
     line-height: 1.2; }
 
-.top-info .bread-comb {
-  color: #b8b9b9;
-  font-size: 1rem;
+.top-info .breadcrumb {
+  background-color: inherit;
+  font-size: 1.2rem;
   line-height: 3.5rem;
-  float: left; }
+  float: left;
+  margin: 0;
+  padding: 0; }
+  .top-info .breadcrumb a {
+    color: #b8b9b9; }
 
 .top-info .rating {
   width: 15rem;
@@ -187,6 +191,10 @@ ul, li {
   border-radius: 5px;
   float: right;
   padding-left: 1rem; }
+  .top-info .rating img {
+    width: 2rem;
+    height: auto;
+    margin-right: 10px; }
   .top-info .rating .rating-level {
     padding-left: 1rem;
     font-weight: bold;
@@ -352,6 +360,40 @@ header {
 .percents-wrapper {
   display: table-cell;
   vertical-align: middle; }
+
+.last-transaction tbody tr:nth-child(odd) td {
+  font-size: 2.5rem;
+  padding-bottom: 0; }
+
+.last-transaction tbody tr:nth-child(even) td {
+  border-top: none;
+  font-size: 1.2rem;
+  padding: .2rem;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5); }
+
+.last-transaction tbody tr:last-child td {
+  border-bottom: 1px solid #ddd; }
+
+.last-transaction tbody td.cashIn {
+  color: #31c193; }
+  .last-transaction tbody td.cashIn:before {
+    font-family: "Glyphicons Halflings";
+    content: "\e027"; }
+
+.last-transaction tbody td.cashOut {
+  color: #187cde; }
+  .last-transaction tbody td.cashOut:before {
+    font-family: "Glyphicons Halflings";
+    content: "\e026"; }
+
+.last-transaction tbody td.pending {
+  background: url("../images/pending.png") 1rem center no-repeat;
+  background-size: 3rem; }
+
+.last-transaction tbody td.confirm {
+  background: url("../images/confirm.png") 1rem center no-repeat;
+  background-size: 3rem; }
 
 .announce-content h6 {
   color: #7b7b7b;
