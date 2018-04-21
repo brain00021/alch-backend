@@ -3,8 +3,8 @@ header{
      position: fixed;
      z-index:99;
      width:100%;
-     background:#fff;
      box-shadow: 0px 0px 10px rgba(#000,0.2);
+    @include alch-gradient();
     @include pie-clearfix;
     .sidenav {
         height: 100%;
@@ -24,9 +24,8 @@ header{
             position: absolute;
             top:0;
             left:0;
-            background-color:rgba($green,0.5);
-            background:$gradient-bg;
             opacity: 0.7;
+            @include alch-gradient();
         }
     }
     .header-nav-wrapper{
@@ -86,7 +85,7 @@ header{
         padding:15px;
         color:#fff;
         font-size: 1.8rem;
-        &:hover{
+        &:hover,&:visited{
             text-decoration: none;
             background:$green;
             color:#fff;
@@ -112,12 +111,12 @@ header{
 #mob-nav-icon{
     float: left;
     span{
-        background-color:$green;
+        background-color:white;
     }
 }
 .customer-icon{
     border-radius: 50%;
-    border:1px solid $green;
+    border:1px solid white;
     @include size(40px,40px);
     float:right;
     position: relative;
@@ -141,21 +140,25 @@ header{
         right:-5px;
     }
     .icon-bell-o {
-        color:$green;
+        color:white;
         font-size: 2.5rem;
     }
 }
 .account-wrapper{
     float: right;
     button#profile-detail{
-        border:1px solid $green;
+        border:0px solid $green;
         padding:5px 15px;
-        background:#fff;
+        background:transparent;
         border-radius: 5px;
-        color:$green;
+        outline: none;
+        color:white;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+    }
+    i.icon-chevron-down {
+        margin-left: 5px;
     }
     .drop-wrapper{
         background:#fff;
@@ -163,6 +166,7 @@ header{
         right:10px;
         position: absolute;
         box-shadow: 0 0 5px rgba(#000,0.2);
+        border-radius: 5px;
         a{
             display:block;
             padding:10px;
