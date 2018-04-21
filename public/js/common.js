@@ -1,12 +1,37 @@
+$(function(){
+    var $pieChart = $('.pie-chart'),
+      percent = parseInt($pieChart.data('percent')),
+      deg = 360*percent/100;
+    if (percent > 50) {
+      $pieChart.addClass('gt-50');
+    }
+    $('.pc-progress-fill').css('transform','rotate('+ deg +'deg)');
+    // $('.pc-percent span').html(percent+'%');
+
+    // for 手機按鈕
+    $("#mob-nav-icon").on('click',function(){
+        let navOpen = $(this).hasClass('open');
+        if(!navOpen ){
+            openNav();
+            $(this).addClass("open");
+        }else{
+            closeNav();
+            $(this).removeClass("open");
+        }
+    });
+
+  });
+
 //mob-header-nav
 function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    $('#alch-back').css({width:250});
+    $(".js-container-wrapper,#mob-nav-icon").css({ marginLeft: 250 });
+    $(".mob-header-bg").fadeIn(); 
 }
 
 function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-  document.body.style.backgroundColor = "white";
+    $("#alch-back").css({ width: 0 });
+    $(".js-container-wrapper,#mob-nav-icon").css({ marginLeft: 0 });
+    $(".mob-header-bg").fadeOut(); 
 }
+
