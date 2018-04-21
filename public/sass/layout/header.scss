@@ -2,6 +2,9 @@ header{
     font-family: "Lato",sans-serif;
      position: fixed;
      z-index:99;
+     width:100%;
+     background:#fff;
+     box-shadow: 0px 0px 10px rgba(#000,0.2);
     @include pie-clearfix;
     .sidenav {
         height: 100%;
@@ -29,6 +32,8 @@ header{
     .header-nav-wrapper{
         padding:5px;
         position: relative;
+        transition: all 0.5s ease;
+        @include pie-clearfix;
     }
     .sidenav>a {
         padding: 8px 8px 8px 10px;
@@ -102,11 +107,87 @@ header{
     overflow: hidden;
     padding-top:60px;
 }
+
+//客服ICON + 選單ICON
+#mob-nav-icon{
+    float: left;
+    span{
+        background-color:$green;
+    }
+}
+.customer-icon{
+    border-radius: 50%;
+    border:1px solid $green;
+    @include size(40px,40px);
+    float:right;
+    position: relative;
+    z-index: 99;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4rem;
+    margin-right:15px;
+    cursor: pointer;
+    &::after{
+        content:'99';
+        display: inline;
+        padding:2px;
+        background:$orange;
+        border-radius: 25px;
+        position: absolute;
+        top:0;
+        height:20px;
+        line-height: 1.2rem;
+        color:white;
+        right:-5px;
+    }
+    .icon-bell-o {
+        color:$green;
+        font-size: 2.5rem;
+    }
+}
+.account-wrapper{
+    float: right;
+    button#profile-detail{
+        border:1px solid $green;
+        padding:5px 15px;
+        background:#fff;
+        border-radius: 5px;
+        color:$green;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .drop-wrapper{
+        background:#fff;
+        color:#999999;
+        right:10px;
+        position: absolute;
+        box-shadow: 0 0 5px rgba(#000,0.2);
+        a{
+            display:block;
+            padding:10px;
+            color:#999999;
+        }
+    }
+
+}
+@media screen and (min-width:1024px){
+header .sidenav {
+    left:0 !important;
+}
+#mob-nav-icon{
+    display: none;
+}
+.js-container-wrapper{
+    margin-left:250px;
+}
+
+}
 @media screen and (max-height: 450px) {
     .sidenav {
         padding-top: 15px;
     }
     .sidenav a {
-        font-size: 18px;
+        font-size: 1.8rem;
     }
 }
