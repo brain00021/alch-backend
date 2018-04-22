@@ -1,12 +1,12 @@
-.grandient-bg {
-    position: fixed;
-    display: block;
-    @include size(100%, 100%);
-    top: 0;
-    left: 0;
-    z-index: 2;
-    @include alch-gradient();
-}
+// .grandient-bg {
+//     position: fixed;
+//     display: block;
+//     @include size(100%, 100%);
+//     top: 0;
+//     left: 0;
+//     z-index: 2;
+//     @include alch-gradient();
+// }
 header{
     font-family: "Lato",sans-serif;
     position: fixed;
@@ -24,16 +24,7 @@ header{
         overflow-x: hidden;
         transition: 0.5s;
         background-size:cover;
-        // &::after{
-        //     content:'';
-        //     display: block;
-        //     @include size(100%,100%);
-        //     position: absolute;
-        //     top:0;
-        //     left:0;
-        //     opacity: .9;
-        //     @include alch-gradient();
-        // }
+        @include alch-gradient();
     }
     .header-nav-wrapper{
         padding:0.5rem;
@@ -41,6 +32,7 @@ header{
         transition: all 0.5s ease;
         left:0;
         @include pie-clearfix;
+        @include alch-gradient();
     }
     .sidenav>a {
         padding: 8px 8px 8px 10px;
@@ -118,7 +110,6 @@ header{
     margin-top:50px;
     padding-top:10px;
     z-index:50;
-    min-height: 95vh;
     background:#f5fcfc;
 }
 
@@ -196,10 +187,6 @@ header{
 
 }
 @media screen and (min-width:1024px){
-header{
-    box-shadow: 0 0 0 #000;
-    background-color:transparent;
-}
 header .sidenav {
     left:0 !important;
     background-color:transparent;
@@ -213,13 +200,13 @@ header .sidenav {
 
 }
 @media screen and (max-width: 1023px) {
-    .header-nav-wrapper{
-         @include alch-gradient();
-    }
-    .sidenav {
-        padding-top: 15px;
-        @include alch-gradient();
-    }
+    // .header-nav-wrapper{
+    //      @include alch-gradient();
+    // }
+    // .sidenav {
+    //     padding-top: 15px;
+    //     @include alch-gradient();
+    // }
     .sidenav a {
         font-size: 1.8rem;
     }
