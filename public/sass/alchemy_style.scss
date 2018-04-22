@@ -1,0 +1,19 @@
+// plugin&var
+@import 'color';
+@import 'template';
+@import 'elate/nav-icon';
+
+// 共同框架
+@import 'layout/reset';
+@import 'layout/common';
+@import 'layout/header'; 
+// 分頁
+@import 'page/dashboard';
+@import 'page/newLoan';
+@import 'page/explore';
+@import 'page/installment';
+@import 'page/details';
+@import 'page/profile';
+@import 'page/setting';	
+@import 'page/history';
+@import 'page/login';

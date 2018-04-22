@@ -1,0 +1,115 @@
+/* === 寬高縮寫 === */
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+/* === 寬高縮寫 finish === */
+// 漸層
+@mixin alch-gradient() {
+    // Gradient
+    $brand-primary: #52d3aa !default;
+    $brand-secondary: #3f95ea !default;
+    background-color: $brand-primary;
+    /* IE9, iOS 3.2+ */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMzZjk1ZWEiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzUyZDNhYSIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, rgb(63, 149, 234)), color-stop(1, rgb(82, 211, 170)));
+    /* Android 2.3 */
+    background-image: -webkit-repeating-linear-gradient(top left, rgb(63, 149, 234) 0%, rgb(82, 211, 170) 100%);
+    /* IE10+ */
+    background-image: repeating-linear-gradient(to bottom right, rgb(63, 149, 234) 0%, rgb(82, 211, 170) 100%);
+    background-image: -ms-repeating-linear-gradient(top left, rgb(63, 149, 234) 0%, rgb(82, 211, 170) 100%);
+}
+/* === float清除 === */
+@mixin pie-clearfix {
+    &:after,
+    &:before {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    *zoom:1;
+}
+/* === float清除 finish  === */
+/* === 字體樣式系列  === */
+// text-hidden
+@mixin hidden-text {
+    /* Hide the text. */
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* === 字體樣式系列 finish === */
+
+/*==== 系列DIV上下置中 =====*/
+@mixin box-vertical-align {
+    &::before {
+        content: '';
+        width: 0;
+        height: 100%;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        background: #f00;
+    }
+}
+@mixin vertical-center{
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+/*==== 系列DIV上下置中 finsih =====*/
+
+
+// 如果你超厭煩寫media很長的名字這只能用在class裡面
+// mixin變數
+// 判斷變數是pc、pad還是mobile，再依照判斷出來的載入對應的media query
+@mixin breakpoint($point) {
+    @if $point==min_pc {
+        @media only screen and (min-width: 768px) {
+            @content;
+        }
+    }
+    @if $point==min_pad {
+        @media only screen and (min-width: 460px) {
+            @content;
+        }
+    }
+    @if $point==min_mobile {
+        @media only screen and (min-width: 280px) {
+            @content;
+        }
+    }
+    @if $point==pc {
+        @media only screen and (max-width: 1024px) {
+            @content;
+        }
+    }
+    @if $point==pad {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    }
+    @if $point==736 {
+        @media only screen and (max-width: 736px) {
+            @content;
+        }
+    }
+    @if $point==376_mobile {
+        @media only screen and (max-width: 376px) {
+            @content;
+        }
+    }
+    @if $point==mobile {
+        @media only screen and (max-width: 320px) {
+            @content;
+        }
+    }
+    @if $point==480_mobile {
+        @media only screen and (max-width: 480px) {
+            @content;
+        }
+    }
+}

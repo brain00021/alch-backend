@@ -1,0 +1,230 @@
+.biggest-login-wrapper{
+    position: relative;
+    overflow: hidden;
+    height:100vh;
+    .tab-content{
+        text-align: center;
+        width:100%;
+        margin-bottom: 20px;
+        a{
+            display:inline-block;
+            width:49%;
+            padding:10px;
+            margin:0 0.25%;
+            color:$green;
+            border:1px solid $green;
+            border-radius: 5px;
+            position: relative;
+            &:hover,&.active{
+                background:$green;
+                color:#fff;
+                text-decoration: none;
+                &::after{
+                    content:'';
+                    display: block;
+                    width: 0;
+                    position: absolute;
+                    height: 0;
+                    margin:auto;
+                    right:0;
+                    left:0;
+
+                    border-style: solid;
+                    border-width: 20px 25px 0 25px;
+                    border-color: $green transparent transparent transparent;
+
+                }
+
+            }
+        }
+    }
+}
+.login-wrapper{
+    position: relative;
+    height:100%;
+    @include pie-clearfix;
+    //input default 
+    /*---------------------------------------------*/
+    input {outline: none;border: none;}
+    textarea {outline: none;border: none;
+        &:focus {border-color: transparent !important;}
+    }
+    input,textarea.input:focus,textarea:focus {border-color: transparent !important;&::-webkit-input-placeholder,&:-moz-placeholder,&::-moz-placeholder,&:-ms-input-placeholder {color: transparent;}}
+    /*---------------------------------------------*/
+}
+// form設計
+.wrap-input2 {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
+}
+
+.input2 {
+    display: block;
+    width: 100%;
+    font-family: Poppins-Regular;
+    font-size: 2rem;
+    color: #555555;
+    line-height: 1.2;
+}
+
+.focus-input2 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+        @include alch-gradient();
+    }
+    &::after {
+        content: attr(data-placeholder);
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        font-family: Poppins-Regular;
+        font-size: 1.6rem;
+        color: #999999;
+        line-height: 1.2;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+    }
+}
+
+input.input2 {
+    height: 45px;
+    +.focus-input2::after {
+        top: 16px;
+        left: 0;
+    }
+}
+
+textarea.input2 {
+    min-height: 115px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    +.focus-input2::after {
+        top: 16px;
+        left: 0;
+    }
+}
+
+.input2:focus+.focus-input2,
+.has-val.input2+.focus-input2 {
+    &::after {
+        top: -13px;
+    }
+    &::before {
+        width: 100%;
+    }
+}
+.logo{
+    text-align: center;
+    margin:auto;
+    margin-bottom:2.0rem;
+    img{
+        width:100%;
+        max-width: 379px;
+    }
+}
+.login-wrapper-cotent {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    height:100%;
+    padding: 50px 55px 90px 55px;
+}
+.button-wrapper{
+    text-align: center;
+}
+.login-button{
+    padding: 0 20px;
+    position: relative;
+    min-width: 100px;
+    width:100%;
+    height: 50px;
+    font-size: 16px;
+    background:$green;
+    color: #fff;
+    line-height: 1.2;
+    border:1px solid $green;
+    margin:auto;
+    text-align: center;
+    border-radius: 5px;
+    transition:all 0.5s ease;
+    top:0;
+    &:hover{
+        background:darken($green,10%);
+        top:2px;
+    }
+}
+.forgetbutton{
+    color:gray;
+}
+.button-wrapper2{
+    position: absolute;
+    bottom:0;
+    padding:15px;
+    margin:auto;
+    left:0;
+    right:0;
+    span{
+        color:gray;
+        float: left;
+    }
+    .signup-button{
+        @extend .login-button;
+        background:$orange;
+        width:auto;
+        height:30px;
+        min-width: 100px;
+        float: right;
+        border-color:$orange;
+        margin-left:30px;
+        &:hover{
+            background:darken($orange,10%);
+        }
+
+    }
+}
+.login-wrapper2{
+    position: relative;
+    padding:0;
+    overflow: hidden;
+    height: 100%;
+    .wallpaper{
+        width:100%;min-width: 1030px;
+    }
+    .grandient-bg{
+        @include size(100%,100%);
+        position: absolute;
+        opacity: 0.8;
+        z-index: 50;
+        @include alch-gradient();
+    }
+    span.solgan{
+        color:white; 
+        display:block;
+        position: absolute;
+        z-index: 51;
+        right:10px;
+        bottom:50px;}
+}
