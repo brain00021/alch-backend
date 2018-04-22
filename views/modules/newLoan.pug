@@ -8,31 +8,73 @@ block content
                     li
                         a(href="#") Start a New Loan
     .row
-        .col-sm-8.col-xs-12
+        .col-sm-6.col-sm-offset-3.col-xs-12
             .card-frame.newloan-form
                 h6 Personal Details
                 .form-group
                     label Name
                         span *
                         input.form-control(type="text",placeholder="First Name")
+                        .popMsg The field is required
                         input.form-control(type="text",placeholder="Last Name")
+                        .popMsg The field is required
                     label Home Address
                         span *
                         input.form-control(type="text",placeholder="Address 1")
+                        .popMsg The field is required
                         input.form-control(type="text",placeholder="Address 2")
                         input.form-control(type="text",placeholder="City")
+                        .popMsg The field is required
                         input.form-control(type="text",placeholder="State/Province")
+                        .popMsg The field is required
                         input.form-control(type="text",placeholder="Zip/Postal Code")
+                        .popMsg The field is required
                         input.form-control(type="text",placeholder="Country")
+                        .popMsg The field is required
                     label Phone
                         span *
                         input.form-control(type="text",placeholder="")
+                        .popMsg The field is required
                     label Date of Birth
                         span *
                         input.form-control(type="text",placeholder="")
+                        .popMsg The field is required
                     label Monthly Income(Including Allowence)
                         span *
                         input.form-control(type="text",placeholder="")
+                        .popMsg The field is required
                 .form-btn
-                    button.btn.btn-alch Previous
-                    button.btn.btn-alch Next
+                    a.btn.btn-alch(href="") Previous
+                    a.btn.btn-alch(href="") Next
+            .card-frame.newloan-form
+                h6 Education Details
+                .form-group
+                    label University / School 
+                        span *
+                        select.form-control(placeholder="Select a school")
+                            option(value="Penn State - Main") Penn State - Main
+                            option(value="Penn State - Main2") Penn State - Main2
+                    .popMsg The field is required
+                    label Academic Degree
+                        span *
+                            select.form-control(placeholder="Select a degree")
+                                option(value="Associate") Associate
+                                option(value="Bachelor") Bachelor
+                                option(value="Master") Master
+                                option(value="Doctor") Doctor
+                                option(value="Other") Other
+                    .popMsg The field is required
+                    label Major
+                        span *
+                        input.form-control(type="text",placeholder="")
+                    .popMsg The field is required
+                    label G.P.A.
+                        input.form-control(type="text",placeholder="")
+                    label Expected Graduation Date
+                        input.form-control(type="",placeholder="YYYY-MM-DD")
+                    label Plan after Graduation
+                        input.form-control(type="option",placeholder="Select one")
+                .form-btn
+                    a.btn.btn-alch(href="") Previous
+                    a.btn.btn-alch(href="") Next
+

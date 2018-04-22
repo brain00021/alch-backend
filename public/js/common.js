@@ -53,4 +53,3 @@ function closeNav() {
     $(".js-container-wrapper,.header-nav-wrapper").css({ left: 0 });
     $(".mob-header-bg").fadeOut(); 
 }
-
