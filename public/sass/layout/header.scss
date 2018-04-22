@@ -7,54 +7,54 @@
 //     z-index: 2;
 //     @include alch-gradient();
 // }
-header{
-    font-family: "Lato",sans-serif;
+header {
+    font-family: "Lato", sans-serif;
     position: fixed;
-    z-index:99;
-    width:100%;
-    top:0;
-    box-shadow: 0px 0px 10px rgba(#000,0.2);
+    z-index: 99;
+    width: 100%;
+    top: 0;
+    box-shadow: 0px 0px 10px $box-shadow;
     @include pie-clearfix;
     .sidenav {
         height: 100%;
-        width:250px;
+        width: 250px;
         position: fixed;
         top: 0;
         left: -250px;
         overflow-x: hidden;
         transition: 0.5s;
-        background-size:cover;
+        background-size: cover;
         @include alch-gradient();
     }
-    .header-nav-wrapper{
-        padding:0.5rem;
+    .header-nav-wrapper {
+        padding: 0.5rem;
         position: relative;
         transition: all 0.5s ease;
-        left:0;
+        left: 0;
         @include pie-clearfix;
         @include alch-gradient();
     }
     .sidenav>a {
         padding: 15px 8px 15px 10px;
         text-decoration: none;
-        font-size:1.8rem;
+        font-size: 1.8rem;
         color: #fff;
         display: block;
         position: relative;
         z-index: 50;
         line-height: 2rem;
         transition: 0.3s;
-        i{
+        i {
             float: left;
-            margin-right:5px;
+            margin-right: 5px;
             vertical-align: top;
         }
         span.icon-plus {
-            float:right;
+            float: right;
         }
         &:hover {
             color: #888888;
-            background:rgba(#fff,0.2);
+            background: rgba(#fff, 0.2);
         }
     }
     .sidenav .closebtn {
@@ -64,32 +64,33 @@ header{
         font-size: 36px;
         margin-left: 50px;
     }
-
     #main {
         transition: margin-left .5s;
         padding: 16px;
     }
 }
-// 第二層的navbar
 
-.second-nav-bar{
-    background:darken($green,30%);
+// 第二層的navbar
+.second-nav-bar {
+    background: darken($green, 30%);
     position: relative;
     z-index: 50;
-    display:none;
-    a{
-        display:block;
-        width:100%;
-        padding:15px;
-        color:#fff;
+    display: none;
+    a {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        color: #fff;
         font-size: 1.8rem;
-        &:hover,&:visited{
+        &:hover,
+        &:visited {
             text-decoration: none;
-            background:$green;
-            color:#fff;
+            background: $green;
+            color: #fff;
         }
     }
 }
+
 .mob-header-bg {
     @include size(100%, 100%);
     background: rgba(#000, 0.2);
@@ -97,66 +98,68 @@ header{
     transition: background-color .5s;
     z-index: 98;
     display: none;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
 }
-.js-container-wrapper{
-    transition:left 0.5s ease;
-    left:0;
+
+.js-container-wrapper {
+    transition: left 0.5s ease;
+    left: 0;
     position: relative;
     overflow: hidden;
-    margin-top:50px;
-    padding-top:10px;
-    z-index:50;
-    background:#f5fcfc;
+    margin-top: 50px;
+    padding-top: 10px;
+    z-index: 50;
+    background: #f5fcfc;
 }
 
 //客服ICON + 選單ICON
-#mob-nav-icon{
+#mob-nav-icon {
     float: left;
-    span{
-        background-color:white;
+    span {
+        background-color: white;
     }
 }
-.customer-icon{
+
+.customer-icon {
+    @include size(40px, 40px);
     border-radius: 50%;
-    border:1px solid white;
-    @include size(40px,40px);
-    float:right;
+    border: 1px solid white;
+    float: right;
     position: relative;
     z-index: 99;
     text-align: center;
     vertical-align: middle;
-    line-height: 4rem;
-    margin-right:15px;
+    line-height: 4.5rem;
+    margin-right: 15px;
     cursor: pointer;
-    &::after{
-        content:'99';
+    &::after {
+        content: '99';
         display: inline;
-        padding:2px;
-        background:$orange;
+        padding: 2px;
+        background: $orange;
         border-radius: 25px;
         position: absolute;
-        top:0;
-        height:20px;
+        top: 0;
         line-height: 1.2rem;
-        color:white;
-        right:-5px;
+        color: white;
+        right: -5px;
     }
     .icon-bell-o {
-        color:white;
+        color: white;
         font-size: 2.5rem;
     }
 }
-.account-wrapper{
+
+.account-wrapper {
     float: right;
-    button#profile-detail{
-        border:0px solid $green;
-        padding:5px 15px;
-        background:transparent;
+    button#profile-detail {
+        border: 0px solid $green;
+        padding: 5px 15px;
+        background: transparent;
         border-radius: 5px;
         outline: none;
-        color:white;
+        color: white;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -164,39 +167,43 @@ header{
     i.icon-chevron-down {
         margin-left: 5px;
     }
-    .drop-wrapper{
-        background:#fff;
-        color:#999999;
-        right:10px;
+    .drop-wrapper {
+        background: #fff;
+        color: #999999;
+        right: 10px;
         position: absolute;
-        box-shadow: 0 0 5px rgba(#000,0.2);
+        box-shadow: 0 0 5px rgba(#000, 0.2);
         border-radius: 5px;
-        a{
-            display:block;
-            padding:10px;
-            color:#999999;
-            &:hover{
-                background:rgba(#000,0.2);
+        a {
+            display: block;
+            padding: 10px;
+            color: #999999;
+            &:hover {
+                background: rgba(#000, 0.2);
                 text-decoration: none;
-                color:#fff;
+                color: #fff;
+                border-radius: 5px 5px 0 0;
+            }
+            &:last-child:hover{
+                border-radius: 0 0 5px 5px ;
             }
         }
     }
-
-}
-@media screen and (min-width:1024px){
-header .sidenav {
-    left:0 !important;
-    background-color:transparent;
-}
-#mob-nav-icon{
-    display: none;
-}
-.js-container-wrapper{
-    margin-left:250px;
 }
 
+@media screen and (min-width:1024px) {
+    header .sidenav {
+        left: 0 !important;
+        background-color: transparent;
+    }
+    #mob-nav-icon {
+        display: none;
+    }
+    .js-container-wrapper {
+        margin-left: 250px;
+    }
 }
+
 @media screen and (max-width: 1023px) {
     // .header-nav-wrapper{
     //      @include alch-gradient();
