@@ -12,7 +12,6 @@
 $size: 20rem;
 .currunt-loan {
     h6 {
-        color: $gray-title;
         border-bottom: 1px solid $under-line;
     }
     .day-left {
@@ -92,62 +91,169 @@ $size: 20rem;
     display: table-cell;
     vertical-align: middle;
 }
+//Lender Dashboard
+.current-invest{
+    h6{
+        border-bottom: 1px solid $under-line;
+    }
+    .invest-total{
+        li:last-child{
+            font-size: 3rem;
+            font-weight: bold;
+            color: $blue;
+        }
+    }
+    .invest-detail{
+        border-left: 1px solid #7c7c7c;
+        padding-left:1rem;
+        li{
+            margin-bottom: 10px;
+        }
+        @media only screen and (max-width:768px) {
+            border-left: none;
+            border-top: 1px solid $under-line;
+            margin:10px 0 0;
+            padding:10px 0 0;
+           }
+    }
+    li{
+        color:$gray-text;
+        line-height: 1.3;
+        span{
+            padding-left: 5px;
+            font-weight:600;
+        }
+    }
+}
 
 //Lender dashboard 表格
-.last-transaction {
-    th,
-    td {
-        // text-align: center;
+.transaction-table {
+    .t-head {
+        width: 100%;
+        background-color: $formhead-bg;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
     }
-    tbody {
-        tr:nth-child(odd) {
-            td {
+    .t-body {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap:wrap;
+        .t-row {
+            width: 100%;
+            padding: .5rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $under-line;
+            background-color:none;
+            &:hover{
+                background-color:darken($formhead-bg,3%);
+                cursor: pointer;
+            }
+            >div{
+                min-width:33%;
+                align-self: center;
+            }
+            >div:first-child{
+               font-size: 2rem;
+               @media only screen and (max-width:500px) {
+                font-size: 1.8rem;   
+                line-height:1.3;
+               }
+            }
+            >div:last-child{
                 font-size: 2.5rem;
-                padding-bottom: 0;
+                text-align: right;
+                @media only screen and (max-width:500px) {
+                    font-size: 2rem;   
+                    line-height:1.3;
+                   }
             }
         }
-        tr:nth-child(even) {
-            td {
-                border-top: none;
-                font-size: 1.2rem;
-                padding: .2rem;
-                text-align: left;
-                color:$date-text;
-            }
+        .date{
+            font-size: 1.2rem;
+            padding:0 .2rem;
+            line-height: 1;
+            text-align: left;
+            color: $date-text;
         }
-        tr:last-child{
-            td{
-                border-bottom:1px solid #ddd;
-            }
-        }
-        td.cashIn{
+        .cashIn{
             color:$cashIn;
-            &:before{
-                font-family:"Glyphicons Halflings";
-                content:"\e027";
+            >div:first-child {
+            color: $cashIn;
+            &:before {
+                font-family: "Glyphicons Halflings";
+                content: "\e027";
+                position: relative;
+                left: -5px;
+                top: 3px;
+            }}
+        }
+        .cashOut{
+            color: $cashOut;
+            >div:first-child {
+
+            &:before {
+                font-family: "Glyphicons Halflings";
+                content: "\e026";
+                position: relative;
+                left: -5px;
+                top: 3px;
+            }}
+        }
+        .pending {
+            &:before {
+                font-family: "Glyphicons Halflings";
+                content:"\e023";
+                position: relative;
+                left:calc(50% - 2rem);
+                font-size: 3rem;
+                color: $pending;
             }
         }
-        td.cashOut{
-            color:$cashOut;
-            &:before{
-                font-family:"Glyphicons Halflings";
-                content:"\e026";
+        .confirm {
+            &:before {
+                font-family: "Glyphicons Halflings";
+                content:"\e089";
+                position: relative;
+                left:calc(50% - 2rem);
+                font-size: 3rem;
+                color: $confirm;
+
             }
         }
-        td.pending {
-            background: url('../images/pending.png') 1rem center no-repeat;
-            background-size: 3rem;
+        .error {
+            &:before {
+                font-family: "Glyphicons Halflings";
+                content:"\e088";
+                position: relative;
+                left:calc(50% - 2rem);
+                font-size: 3rem;
+                color: $error;
+
+            }
         }
-        td.confirm {
-            background: url('../images/confirm.png') 1rem center no-repeat;
-            background-size: 3rem;
+    }
+}
+ul[id^=detail]{
+    width: 100%;
+    padding: 0 2rem;
+    margin-top: 3px;
+    background-color:$detail-bg;
+    border-radius: 5px;
+    .switch{
+        text-align: center;
+        font-size: large;
+        border-top: 1px solid $form-hover;
+        color: $form-label;
+        &:hover{
+            color: lighten(#27bdbe,5%);
         }
     }
 }
 
 .announce-content {
     h6 {
-        color: $gray-title;
         border-bottom: 1px solid $under-line;
     }
     .announ-list {

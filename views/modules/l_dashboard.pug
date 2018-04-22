@@ -14,55 +14,92 @@ block content
             //- 		span.rating-level A1
     .row
         .col-md-4.col-sm-12
-            .card-frame.currunt-invest
+            .card-frame.current-invest
                 h6 The Current Investment
-                ul.invest-total
-                    li  Total:
-                    li  $3000
-                ul.invest-detail
-                    li  Invested Project:
-                        span 3
-                    li  Average annual interest rate:
-                        span 7%
-                    li  Estimated expiry rate of return:
-                        span 14.85%
+                .row
+                    .col-sm-6
+                        ul.invest-total
+                            li  Total:
+                            li  $30,000.67
+                    .col-sm-6
+                        ul.invest-detail
+                            li  Invested Project:
+                                span 3
+                            li  Average annual interest rate:
+                                span 7%
+                            li  Estimated expiry rate of return:
+                                span 14.85%
         .col-md-4.col-sm-6
             .card-frame.last-transaction
                 h6 Last Transaction
                     a.view-all View All
                 .transaction-table
                     .t-head
-                        .t-row
-                            div Type
-                            div Status
-                            div Amount
-                        .t-row
-                            div.cashIn Cash In
+                        div Type
+                        div Status
+                        div Amount
+                    .t-body
+                        .t-row.cashIn(data-toggle="collapse" href="#detail-1")
+                            div Cash In
+                                .date 2017-12-11
                             div.pending
                             div $30540
-                            div(colspan="3") 2017-12-11 13:22:22
-                        .t-row
-                            div.cashIn Cash In
+                        ul#detail-1.collapse
+                            li Time: 2017-12-11 10:08:08
+                            li Status:Pending
+                            li Total: $315
+                            li Borrower: Amile Chang
+                            li.switch(data-toggle="collapse" href="#detail-1")
+                                i.glyphicon.glyphicon-menu-up
+                        .t-row.cashIn(data-toggle="collapse" href="#detail-2")
+                            div Cash In
+                                .date 2017-12-11
                             div.confirm
                             div $51100
-                        .t-row
-                            div(colspan="3") 2017-12-11 13:22:22
-                        .t-row
-                            div.cashIn Cash In
+                        ul#detail-2.collapse
+                            li Time: 2017-12-11 10:08:08
+                            li Status:Pending
+                            li Total: $315
+                            li Borrower: Amile Chang
+                            li.switch(data-toggle="collapse" href="#detail-2")
+                                i.glyphicon.glyphicon-menu-up
+                        .t-row.cashIn(data-toggle="collapse" href="#detail-3")
+                            div Cash In
+                                .date 2017-12-11
                             div.confirm
                             div $53300.11
-                        .t-row
-                            div(colspan="3") 2017-12-11 13:22:22
-                        .t-row
-                            div.cashOut Cash Out
+                        ul#detail-3.collapse
+                            li Time: 2017-12-11 10:08:08
+                            li Status:Pending
+                            li Total: $315
+                            li Borrower: Amile Chang
+                            li.switch(data-toggle="collapse" href="#detail-3")
+                                i.glyphicon.glyphicon-menu-up
+                        .t-row.cashOut.collapse(data-toggle="collapse" href="#detail-4")
+                            div Cash Out
+                                .date 2017-12-11
                             div.pending
                             div $50880.32
-                            div2017-12-11 13:22:22
-                        .t-row
-                            div.cashIn Cash In
+                        ul#detail-4.collapse
+                            li Time: 2017-12-11 10:08:08
+                            li Status:Pending
+                            li Total: $315
+                            li Borrower: Amile Chang
+                            li.switch(data-toggle="collapse" href="#detail-4")
+                                i.glyphicon.glyphicon-menu-up
+                        .t-row.cashIn(data-toggle="collapse" href="#detail-5")
+                            div Cash In
+                                .date 2017-12-11
                             div.confirm
                             div $51100.45
-                            div 2017-12-11 13:22:22
+                        ul#detail-5.collapse
+                            li Time: 2017-12-11 10:08:08
+                            li Status:Pending
+                            li Total: $315
+                            li Borrower: Amile Chang
+                            li.switch(data-toggle="collapse" href="#detail-5")
+                                span.glyphicon.glyphicon-menu-up
+
 
         .col-md-4.col-sm-6
             .card-frame.announce-content

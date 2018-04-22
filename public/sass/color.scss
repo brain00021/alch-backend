@@ -15,16 +15,25 @@ $day-left-text:#b8b9b9;
 $piechart-bg:linear-gradient($green , $blue);
 
 $form-label:#8a9bb3;
+$form-line:#c2c2c2;
 $form-hover:#cddedd;
+$formhead-bg:#f6f6f6;
 $date-text:rgba(0, 0, 0,.5);
 
 $content-text:#2c2c2c;
+$gray-text:#acacac;
 $box-shadow:rgba(0, 0, 0,.2); 
 
 $cashIn:darken($green,10%);
 $cashOut:darken($blue,10%);
-
+$pending:#848484;
+$confirm:#f7814d;
+$error:rgb(236, 46, 20);
+$detail-bg:#fcf8e3;
 $under-line:rgba(0, 0, 0,.1);
+
+
+
 $new-badge:#3faefb;
 $popular-badge:#f7814d;
 $high-badge:#f26d7d;
