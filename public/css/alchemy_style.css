@@ -774,12 +774,12 @@ ul[id^=detail] {
   .biggest-login-wrapper .tab-content {
     text-align: center;
     width: 100%;
-    margin-bottom: 20px; }
+    margin-bottom: 50px; }
     .biggest-login-wrapper .tab-content a {
       display: inline-block;
-      width: 49%;
+      width: 48%;
       padding: 10px;
-      margin: 0 0.25%;
+      margin: 0 0.5%;
       color: #52d3aa;
       border: 1px solid #52d3aa;
       border-radius: 5px;
@@ -925,7 +925,7 @@ textarea.input2 {
 .button-wrapper {
   text-align: center; }
 
-.login-button, .button-wrapper2 .signup-button {
+.login-button, .signup-button {
   padding: 0 20px;
   position: relative;
   min-width: 100px;
@@ -943,7 +943,7 @@ textarea.input2 {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
   top: 0; }
-  .login-button:hover, .button-wrapper2 .signup-button:hover {
+  .login-button:hover, .signup-button:hover {
     background: #31c193;
     top: 2px; }
 
@@ -956,20 +956,20 @@ textarea.input2 {
   padding: 15px;
   margin: auto;
   left: 0;
-  right: 0; }
+  right: 0;
+  text-align: center; }
   .button-wrapper2 span {
-    color: gray;
-    float: left; }
-  .button-wrapper2 .signup-button {
-    background: #f7941d;
-    width: auto;
-    height: 30px;
-    min-width: 100px;
-    float: right;
-    border-color: #f7941d;
-    margin-left: 30px; }
-    .button-wrapper2 .signup-button:hover {
-      background: #d97a08; }
+    color: gray; }
+
+.signup-button {
+  background: #f7941d;
+  width: auto;
+  height: 30px;
+  min-width: 100px;
+  border-color: #f7941d;
+  margin-left: 30px; }
+  .signup-button:hover {
+    background: #d97a08; }
 
 .login-wrapper2 {
   position: relative;
@@ -1002,5 +1002,26 @@ textarea.input2 {
     z-index: 51;
     right: 10px;
     bottom: 50px; }
+
+.contact2-form-title {
+  display: block;
+  font-size: 4rem;
+  color: #333333;
+  line-height: 4rem;
+  text-align: center;
+  padding: 0 25px;
+  margin-bottom: 4rem; }
+
+.yellow-bg {
+  background: #f7941d;
+  border-color: #f7941d; }
+  .yellow-bg:hover {
+    background: #d97a08; }
+
+.green-bg {
+  background: #52d3aa;
+  border-color: #52d3aa; }
+  .green-bg:hover {
+    background: #31c193; }
 
 /*# sourceMappingURL=alchemy_style.css.map */
