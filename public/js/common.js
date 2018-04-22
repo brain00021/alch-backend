@@ -38,7 +38,6 @@ $(function(){
     $("#profile-detail").on('click',function(){
         $(".drop-wrapper").toggle();
     });
-
   });
 
 //mob-header-nav
@@ -53,3 +52,18 @@ function closeNav() {
     $(".js-container-wrapper,.header-nav-wrapper").css({ left: 0 });
     $(".mob-header-bg").fadeOut(); 
 }
+
+// login
+$(function(){
+    //  Focus Contact2 ]*/
+    $('.input2').each(function(){
+        $(this).on('blur', function(){
+            if($(this).val().trim() != "") {
+                $(this).addClass('has-val');
+            }
+            else {
+                $(this).removeClass('has-val');
+            }
+        });    
+    })
+});
