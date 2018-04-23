@@ -5,27 +5,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../public/css/plugins/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="../public/css/font/fontawesome.min.css">
+  <!-- Animate.css-->
+  <link href="../public/css/plugins/animate.css" rel="stylesheet">
+  <!-- Icomoon Icon Fonts-->
+  <link href="../public/css/plugins/icomoon.css" rel="stylesheet">
+  <!-- Magnific Popup-->
+  <link href="../public/css/plugins/magnific-popup.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../public/css/alchemy_style.css">
   <body>
     <header>
       <div class="header-nav-wrapper">
         <div id="mob-nav-icon"><span></span><span></span><span></span><span></span></div>
-        <div class="customer-icon"></div>
+        <div class="account-wrapper">
+          <button id="profile-detail">adminXXXXXXX123<i class="icon-chevron-down"></i></button>
+          <div class="drop-wrapper"><a class="dropdown-item" href="#">My Profile</a><a class="dropdown-item" href="#">Log Out</a></div>
+        </div>
+        <div class="customer-icon"><i class="icon-bell-o"></i></div>
       </div>
-      <div class="sidenav" id="alch-back"><a href="#">Dashboard</a><a href="#">Start a New Loan</a><a href="#">My Loan</a><a href="#">Setting</a></div>
+      <div class="sidenav" id="alch-back"><a href="#"><img src="../public/images/logo.png"></a><a href="#"><i class="icon-dashboard"></i><span>Dashboard</span><span class="icon-plus"></span></a><a href="#"><i class="icon-paperclip"> </i><span>Start a New Loan</span><span class="icon-plus"></span></a>
+        <div class="second-nav-bar"><a href="#"><i class="icon-chevron-right"> </i><span>Detail</span></a><a href="#"><i class="icon-chevron-right"> </i><span>Detail</span></a><a href="#"><i class="icon-chevron-right"> </i><span>Detail</span></a><a href="#"><i class="icon-chevron-right"> </i><span>Detail</span></a></div><a href="#"><i class="icon-paperclip"> </i><span>My Loan</span><span class="icon-plus"></span></a>
+        <div class="second-nav-bar"><a href="#"><i class="icon-chevron-right"> </i><span>Detail</span></a><a href="#"><i class="icon-chevron-right"> </i><span>Detail</span></a><a href="#"><i class="icon-chevron-right"> </i><span>Detail</span></a><a href="#"><i class="icon-chevron-right"> </i><span>Detail</span></a></div><a href="#"><i class="icon-cog"> </i><span>Setting</span><span class="icon-plus"></span></a>
+      </div>
     </header>
-    <div class="mob-header-bg"></div>
+    <div class="grandient-bg"></div>
     <ol class="newloan-nav">
-      <li class="step1 active">Personal</li>
-      <li class="step2">Loan</li>
-      <li class="step3">Education</li>
-      <li class="step4">Financial</li>
-      <li class="step5">Connect Bank</li>
-      <li class="step6">Supplementary</li>
-      <li class="step7">Review</li>
+      <li class="step1 active"> <span>Personal</span></li>
+      <li class="step2"> <span>Loan</span></li>
+      <li class="step3"><span>Education</span></li>
+      <li class="step4"> <span>Financial</span></li>
+      <li class="step5"><span>Connect Bank</span></li>
+      <li class="step6"><span>Supplementary</span></li>
+      <li class="step7"> <span>Review</span></li>
     </ol>
     <div class="container-fluid js-container-wrapper">
+      <div class="mob-header-bg"></div>
       <div class="top-info">
         <div class="row">
           <div class="col-sm-6">
@@ -37,42 +50,86 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-8 col-xs-12">
+        <div class="col-sm-6 col-sm-offset-3 col-xs-12">
           <div class="card-frame newloan-form">
             <h6>Personal Details</h6>
             <div class="form-group">
               <label>Name<span>*</span>
                 <input class="form-control" type="text" placeholder="First Name">
+                <div class="popMsg">The field is required</div>
                 <input class="form-control" type="text" placeholder="Last Name">
+                <div class="popMsg">The field is required</div>
               </label>
               <label>Home Address<span>*</span>
                 <input class="form-control" type="text" placeholder="Address 1">
+                <div class="popMsg">The field is required</div>
                 <input class="form-control" type="text" placeholder="Address 2">
                 <input class="form-control" type="text" placeholder="City">
+                <div class="popMsg">The field is required</div>
                 <input class="form-control" type="text" placeholder="State/Province">
+                <div class="popMsg">The field is required</div>
                 <input class="form-control" type="text" placeholder="Zip/Postal Code">
+                <div class="popMsg">The field is required</div>
                 <input class="form-control" type="text" placeholder="Country">
+                <div class="popMsg">The field is required</div>
               </label>
               <label>Phone<span>*</span>
                 <input class="form-control" type="text" placeholder="">
+                <div class="popMsg">The field is required</div>
               </label>
               <label>Date of Birth<span>*</span>
                 <input class="form-control" type="text" placeholder="">
+                <div class="popMsg">The field is required</div>
               </label>
               <label>Monthly Income(Including Allowence)<span>*</span>
                 <input class="form-control" type="text" placeholder="">
+                <div class="popMsg">The field is required</div>
               </label>
             </div>
-            <div class="form-btn">
-              <button class="btn btn-alch">Previous</button>
-              <button class="btn btn-alch">Next</button>
+            <div class="form-btn"><a class="btn btn-alch" href="">Previous</a><a class="btn btn-alch" href="">Next</a></div>
+          </div>
+          <div class="card-frame newloan-form">
+            <h6>Education Details</h6>
+            <div class="form-group">
+              <label>University / School <span>*</span>
+                <select class="form-control" placeholder="Select a school">
+                  <option value="Penn State - Main">Penn State - Main</option>
+                  <option value="Penn State - Main2">Penn State - Main2</option>
+                </select>
+              </label>
+              <div class="popMsg">The field is required</div>
+              <label>Academic Degree<span>*
+                  <select class="form-control" placeholder="Select a degree">
+                    <option value="Associate">Associate</option>
+                    <option value="Bachelor">Bachelor</option>
+                    <option value="Master">Master</option>
+                    <option value="Doctor">Doctor</option>
+                    <option value="Other">Other</option>
+                  </select></span></label>
+              <div class="popMsg">The field is required</div>
+              <label>Major<span>*</span>
+                <input class="form-control" type="text" placeholder="">
+              </label>
+              <div class="popMsg">The field is required</div>
+              <label>G.P.A.
+                <input class="form-control" type="text" placeholder="">
+              </label>
+              <label>Expected Graduation Date
+                <input class="form-control" type="" placeholder="YYYY-MM-DD">
+              </label>
+              <label>Plan after Graduation
+                <input class="form-control" type="option" placeholder="Select one">
+              </label>
             </div>
+            <div class="form-btn"><a class="btn btn-alch" href="">Previous</a><a class="btn btn-alch" href="">Next</a></div>
           </div>
         </div>
       </div>
     </div>
     <script src="../public/js/jquery.min.js"></script>
     <script src="../public/js/bootstrap.min.js"></script>
+    <script src="../public/js/moment.js"></script>
+    <script src="../public/js/bootstrap-datetimepicker.js"></script>
     <script src="../public/js/common.js"></script>
     <!--if lt IE 9
     script(src='https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')

@@ -2,6 +2,9 @@
     position: relative;
     overflow: hidden;
     height:100vh;
+    ~.js-container-wrapper{
+        display: none;
+    }
     .tab-content{
         text-align: center;
         width:100%;
@@ -199,7 +202,7 @@ textarea.input2 {
     height:30px;
     min-width: 100px;
     border-color:$orange;
-    margin-left:30px;
+    margin-left:0.5%;
     &:hover{
         background:darken($orange,10%);
     }
@@ -251,4 +254,23 @@ textarea.input2 {
     &:hover{
         background:darken($green, 10%);
     }
+}
+// forgetpassword
+
+.change-wrapper-cotent{
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    -webkit-box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
+    border-radius: .5rem;
+    background-color: #fff;
+    .contact2-form-title{
+        font-size:3rem;
+    }
+}
+.change-wrapper{
+    @include pie-clearfix;
+    padding:0px;
+    height:auto;
 }

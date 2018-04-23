@@ -1,46 +1,53 @@
 .newloan-nav {
     min-height: 70px;
+    width: calc(100% - 250px);
     background-color: $newLoan-nav-bg;
     display: flex;
     counter-reset: section;
     justify-content: center;
     align-items: stretch;
+    position: relative;
+    top: 50px;
+    left: 250px;
+    z-index: 2;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 1023px) {
+        width: 100%;
+        left: 0px;
+    }
     li {
         display: flex;
-        align-items: center;
-        padding: 0 10px;
+        align-items: center; 
+        min-width: 14%;
         margin: 0 auto;
         line-height: 1.2;
         color: $gray-title;
-        &:before {
-            counter-increment: section;
-            content: counter(section);
-            display: inline-block;
-            margin-right: 5px;
-            text-align: center;
-            background: #fff;
-            width: 3rem;
-            border-radius: .9rem;
-            border: 1px solid #7b7b7b;
-            color: #7b7b7b;
+        span {
+            margin: 0 auto;
+            &:before {
+                counter-increment: section;
+                content: counter(section);
+                display: inline-block;
+                margin-right: 5px;
+                text-align: center;
+                background: #fff;
+                width: 3rem;
+                border-radius: .9rem;
+                border: 1px solid #7b7b7b;
+                color: #7b7b7b;
+            }
         }
         &.active {
-            background-color: $newLoan-nav-bg;
+            background-color: #B9ECDE;
             color: $green;
-            &:before {
+            padding: 0 10px;
+            span:before {
                 background: $orange;
                 color: #eee;
                 border: none;
             }
         }
-    } // @media only screen and (max-width:768px) {
-    //     display: block;
-    //     text-align: center;
-    //     li {
-    //         width: 50%;
-    //         float: left;
-    //     }
-    // }
+    }
 }
 
 .newloan-form {
@@ -50,22 +57,89 @@
     label {
         width: 100%;
         color: $form-label;
-        font-size: 1.2rem;
-        span {
-            color: indianred;
-        }
     }
-    input {
-        border: none;
-        border-bottom: 1px solid $form-line;
-        border-radius: 0;
-        box-shadow: none;
+    font-size: 1.2rem;
+    span {
+        color: indianred;
     }
-    .form-control:focus{
+}
+
+.popMsg {
+    text-align: right;
+    margin-top: -3px;
+    color:#7b7b7b;
+    font-weight: 300;
+    &:before {
+        font-family: "Glyphicons Halflings";
+        content: "\e101";
+        padding-right: 3px;
+        font-size: 1rem;
+        color: indianred;
+    }
+}
+
+.form-control {
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid $form-line;
+    border-radius: 0;
+    &:focus {
         border-color: $green;
         box-shadow: none;
     }
 }
-:-ms-input-placeholder,::-moz-placeholder,:-moz-placeholder,::-webkit-input-placeholder{
-    color:#b5faf5;
+
+.form-control::-moz-placeholder {
+    color: #cddedd;
+    opacity: 1;
+    font-weight: 500;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #cddedd;
+    font-weight: 500;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #cddedd;
+    font-weight: 500;
+}
+
+// @media only screen and (max-width: 768px) {
+//     .newloan-nav {
+//         display: block;
+//         li {
+//             display: flex;
+//             width: 40%;
+//             margin: 0 4%;
+//             height:40px;
+//             // line-height: 40px;
+//         }
+//     }
+// }
+@media only screen and (max-width: 768px) {
+    .newloan-nav {
+        justify-content: space-between;
+        width: 350vw;
+        flex-wrap: nowrap;
+        min-height: 70px;
+        li {
+            width: 50vw;
+            margin: 0;
+            padding: 0 10px;
+            height: 70px;
+            &.active {
+                background-color: unset;
+                position: relative;
+                &:after {
+                    font-family: "Glyphicons Halflings";
+                    content: "\e092";
+                    position: absolute;
+                    right: 0;
+                    font-size: 2rem;
+                    color: #ccc;
+                }
+            }
+        }
+    }
 }

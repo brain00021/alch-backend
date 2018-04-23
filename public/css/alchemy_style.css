@@ -218,7 +218,7 @@ ul, li {
 .form-btn {
   width: 80%;
   margin: 20px auto; }
-  .form-btn button {
+  .form-btn a {
     width: 39%;
     min-width: 100px;
     padding: 10px;
@@ -303,15 +303,13 @@ header {
     header .header-nav-wrapper:after {
       clear: both; }
   header .sidenav > a {
-    padding: 8px 8px 8px 10px;
+    padding: 15px 8px 15px 10px;
     text-decoration: none;
     font-size: 1.8rem;
-    margin-bottom: 10px;
     color: #fff;
     display: block;
     position: relative;
     z-index: 50;
-    vertical-align: top;
     line-height: 2rem;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
@@ -431,6 +429,7 @@ header {
     background: #fff;
     color: #999999;
     right: 10px;
+    display: none;
     position: absolute;
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
@@ -701,7 +700,8 @@ ul[id^=detail] {
 
 .newloan-nav {
   min-height: 70px;
-  background-color: rgba(82, 211, 170, 0.2);
+  width: calc(100% - 250px);
+  background-color: #E3F7F3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -711,7 +711,17 @@ ul[id^=detail] {
   justify-content: center;
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
-  align-items: stretch; }
+  align-items: stretch;
+  position: relative;
+  top: 50px;
+  left: 250px;
+  z-index: 2;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  @media only screen and (max-width: 1023px) {
+    .newloan-nav {
+      width: 100%;
+      left: 0px; } }
   .newloan-nav li {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -719,58 +729,109 @@ ul[id^=detail] {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0 10px;
+    min-width: 14%;
     margin: 0 auto;
     line-height: 1.2;
     color: #7b7b7b; }
-    .newloan-nav li:before {
-      counter-increment: section;
-      content: counter(section);
-      display: inline-block;
-      margin-right: 5px;
-      text-align: center;
-      background: #fff;
-      width: 3rem;
-      border-radius: .9rem;
-      border: 1px solid #7b7b7b;
-      color: #7b7b7b; }
+    .newloan-nav li span {
+      margin: 0 auto; }
+      .newloan-nav li span:before {
+        counter-increment: section;
+        content: counter(section);
+        display: inline-block;
+        margin-right: 5px;
+        text-align: center;
+        background: #fff;
+        width: 3rem;
+        border-radius: .9rem;
+        border: 1px solid #7b7b7b;
+        color: #7b7b7b; }
     .newloan-nav li.active {
-      background-color: rgba(82, 211, 170, 0.2);
-      color: #52d3aa; }
-      .newloan-nav li.active:before {
+      background-color: #B9ECDE;
+      color: #52d3aa;
+      padding: 0 10px; }
+      .newloan-nav li.active span:before {
         background: #f7941d;
         color: #eee;
         border: none; }
 
-.newloan-form h6 {
-  color: #3f95ea; }
-
-.newloan-form label {
-  width: 100%;
-  color: #8a9bb3;
+.newloan-form {
   font-size: 1.2rem; }
-  .newloan-form label span {
+  .newloan-form h6 {
+    color: #3f95ea; }
+  .newloan-form label {
+    width: 100%;
+    color: #8a9bb3; }
+  .newloan-form span {
     color: indianred; }
 
-.newloan-form input {
+.popMsg {
+  text-align: right;
+  margin-top: -3px;
+  color: #7b7b7b;
+  font-weight: 300; }
+  .popMsg:before {
+    font-family: "Glyphicons Halflings";
+    content: "\e101";
+    padding-right: 3px;
+    font-size: 1rem;
+    color: indianred; }
+
+.form-control {
   border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   border-bottom: 1px solid #c2c2c2;
-  border-radius: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
+  border-radius: 0; }
+  .form-control:focus {
+    border-color: #52d3aa;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
 
-.newloan-form .form-control:focus {
-  border-color: #52d3aa;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
+.form-control::-moz-placeholder {
+  color: #cddedd;
+  opacity: 1;
+  font-weight: 500; }
 
-:-ms-input-placeholder, ::-moz-placeholder, :-moz-placeholder, ::-webkit-input-placeholder {
-  color: #b5faf5; }
+.form-control:-ms-input-placeholder {
+  color: #cddedd;
+  font-weight: 500; }
+
+.form-control::-webkit-input-placeholder {
+  color: #cddedd;
+  font-weight: 500; }
+
+@media only screen and (max-width: 768px) {
+  .newloan-nav {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 350vw;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    min-height: 70px; }
+    .newloan-nav li {
+      width: 50vw;
+      margin: 0;
+      padding: 0 10px;
+      height: 70px; }
+      .newloan-nav li.active {
+        background-color: unset;
+        position: relative; }
+        .newloan-nav li.active:after {
+          font-family: "Glyphicons Halflings";
+          content: "\e092";
+          position: absolute;
+          right: 0;
+          font-size: 2rem;
+          color: #ccc; } }
 
 .biggest-login-wrapper {
   position: relative;
   overflow: hidden;
   height: 100vh; }
+  .biggest-login-wrapper ~ .js-container-wrapper {
+    display: none; }
   .biggest-login-wrapper .tab-content {
     text-align: center;
     width: 100%;
@@ -967,7 +1028,7 @@ textarea.input2 {
   height: 30px;
   min-width: 100px;
   border-color: #f7941d;
-  margin-left: 30px; }
+  margin-left: 0.5%; }
   .signup-button:hover {
     background: #d97a08; }
 
@@ -1023,5 +1084,26 @@ textarea.input2 {
   border-color: #52d3aa; }
   .green-bg:hover {
     background: #31c193; }
+
+.change-wrapper-cotent {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
+  border-radius: .5rem;
+  background-color: #fff; }
+  .change-wrapper-cotent .contact2-form-title {
+    font-size: 3rem; }
+
+.change-wrapper {
+  *zoom: 1;
+  padding: 0px;
+  height: auto; }
+  .change-wrapper:after, .change-wrapper:before {
+    content: "";
+    display: table; }
+  .change-wrapper:after {
+    clear: both; }
 
 /*# sourceMappingURL=alchemy_style.css.map */

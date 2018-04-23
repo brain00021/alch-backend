@@ -35,15 +35,13 @@ header{
         @include alch-gradient();
     }
     .sidenav>a {
-        padding: 8px 8px 8px 10px;
+        padding: 15px 8px 15px 10px;
         text-decoration: none;
         font-size:1.8rem;
-        margin-bottom:10px;
         color: #fff;
         display: block;
         position: relative;
         z-index: 50;
-        vertical-align: top;
         line-height: 2rem;
         transition: 0.3s;
         i{
@@ -158,6 +156,7 @@ header{
         background:transparent;
         border-radius: 5px;
         outline: none;
+       
         color:white;
         white-space: nowrap;
         text-overflow: ellipsis;
@@ -170,6 +169,7 @@ header{
         background:#fff;
         color:#999999;
         right:10px;
+        display: none;
         position: absolute;
         box-shadow: 0 0 5px rgba(#000,0.2);
         border-radius: 5px;
