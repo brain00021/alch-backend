@@ -245,7 +245,7 @@ ul, li {
       background: #3f95ea; }
 
 header {
-  font-family: "Lato",sans-serif;
+  font-family: "Lato", sans-serif;
   position: fixed;
   z-index: 99;
   width: 100%;
@@ -382,16 +382,16 @@ header {
     background-color: white; }
 
 .customer-icon {
-  border-radius: 50%;
-  border: 1px solid white;
   width: 40px;
   height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
   float: right;
   position: relative;
   z-index: 99;
   text-align: center;
   vertical-align: middle;
-  line-height: 4rem;
+  line-height: 4.5rem;
   margin-right: 15px;
   cursor: pointer; }
   .customer-icon::after {
@@ -402,7 +402,6 @@ header {
     border-radius: 25px;
     position: absolute;
     top: 0;
-    height: 20px;
     line-height: 1.2rem;
     color: white;
     right: -5px; }
@@ -441,7 +440,10 @@ header {
       .account-wrapper .drop-wrapper a:hover {
         background: rgba(0, 0, 0, 0.2);
         text-decoration: none;
-        color: #fff; }
+        color: #fff;
+        border-radius: 5px 5px 0 0; }
+      .account-wrapper .drop-wrapper a:last-child:hover {
+        border-radius: 0 0 5px 5px; }
 
 @media screen and (min-width: 1024px) {
   header .sidenav {
@@ -763,6 +765,7 @@ ul[id^=detail] {
     width: 100%;
     color: #8a9bb3; }
   .newloan-form span {
+<<<<<<< HEAD
     color: indianred; }
 
 .popMsg {
@@ -777,6 +780,22 @@ ul[id^=detail] {
     font-size: 1rem;
     color: indianred; }
 
+=======
+    color: indianred; }
+
+.popMsg {
+  text-align: right;
+  margin-top: -3px;
+  color: #7b7b7b;
+  font-weight: 300; }
+  .popMsg:before {
+    font-family: "Glyphicons Halflings";
+    content: "\e101";
+    padding-right: 3px;
+    font-size: 1rem;
+    color: indianred; }
+
+>>>>>>> marion
 .form-control {
   border: none;
   -webkit-box-shadow: none;
@@ -800,6 +819,7 @@ ul[id^=detail] {
 .form-control::-webkit-input-placeholder {
   color: #cddedd;
   font-weight: 500; }
+<<<<<<< HEAD
 
 @media only screen and (max-width: 768px) {
   .newloan-nav {
@@ -825,6 +845,170 @@ ul[id^=detail] {
           right: 0;
           font-size: 2rem;
           color: #ccc; } }
+=======
+
+@media only screen and (max-width: 768px) {
+  .newloan-nav {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 350vw;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    min-height: 70px; }
+    .newloan-nav li {
+      width: 50vw;
+      margin: 0;
+      padding: 0 10px;
+      height: 70px; }
+      .newloan-nav li.active {
+        background-color: unset;
+        position: relative; }
+        .newloan-nav li.active:after {
+          font-family: "Glyphicons Halflings";
+          content: "\e092";
+          position: absolute;
+          right: 0;
+          font-size: 2rem;
+          color: #ccc; } }
+
+.total-capital {
+  text-align: center;
+  color: #52d3aa; }
+  .total-capital h5 {
+    margin: 0; }
+
+.explore_tab {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .explore_tab li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 19%;
+    margin: 0 auto; }
+    .explore_tab li a {
+      width: 100%;
+      text-align: center;
+      color: #52d3aa;
+      background-color: #fff;
+      padding: 2px 0;
+      border: 1px solid #52d3aa;
+      border-radius: 8px;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s; }
+      .explore_tab li a:hover, .explore_tab li a:focus, .explore_tab li a:active {
+        background-color: #52d3aa;
+        color: #fff;
+        -webkit-transition: .3s;
+        -o-transition: .3s;
+        transition: .3s;
+        text-decoration: none; }
+    @media only screen and (max-width: 768px) {
+      .explore_tab li {
+        min-width: initial;
+        width: 32%;
+        margin: 0 3px 3px 0; }
+        .explore_tab li:nth-child(4) {
+          width: 48%; }
+        .explore_tab li:nth-child(5) {
+          width: 49%; } }
+
+.explore-card {
+  position: relative; }
+  .explore-card .card-rating {
+    word-spacing: 1;
+    position: relative; }
+    .explore-card .card-rating:before {
+      content: '';
+      display: block;
+      width: 5px;
+      height: 2rem;
+      background-color: #3DABA0;
+      position: absolute;
+      left: -2rem;
+      top: 5px; }
+  .explore-card .explore-tag {
+    width: 60px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+    right: 1rem;
+    top: -8px;
+    -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.1); }
+    .explore-card .explore-tag.new {
+      background-color: #3faefb; }
+      .explore-card .explore-tag.new:before {
+        content: 'New';
+        color: #fff;
+        font-size: 1.5rem;
+        position: relative;
+        top: -5px;
+        left: 15px; }
+    .explore-card .explore-tag.popular {
+      background-color: #f7814d; }
+      .explore-card .explore-tag.popular:before {
+        content: 'Popular';
+        color: #fff;
+        font-size: 1.5rem;
+        position: relative;
+        top: -5px;
+        left: 5px; }
+    .explore-card .explore-tag.high {
+      background-color: #f26d7d; }
+      .explore-card .explore-tag.high:before {
+        content: 'High';
+        color: #fff;
+        font-size: 1.5rem;
+        position: relative;
+        top: -5px;
+        left: 15px; }
+    .explore-card .explore-tag.end {
+      background-color: #006980; }
+      .explore-card .explore-tag.end:before {
+        content: 'End';
+        color: #fff;
+        font-size: 1.5rem;
+        position: relative;
+        top: -5px;
+        left: 15px; }
+  .explore-card .row {
+    text-align: center; }
+    .explore-card .row [class*='col'] {
+      padding: 0 5px; }
+      .explore-card .row [class*='col']:nth-child(4) {
+        text-align: initial; }
+  .explore-card .interest-rate {
+    font-size: 2.5rem;
+    color: #52d3aa; }
+  .explore-card .invest-bal {
+    font-size: 2.5rem;
+    color: #26BCBD; }
+  .explore-card .instellment {
+    font-size: 2.5rem; }
+  .explore-card p {
+    font-size: 1.3rem;
+    margin: 5px 0; }
+  .explore-card span {
+    font-size: 1.2rem; }
+  .explore-card .day-left {
+    color: #7b7b7b;
+    font-size: 1.5rem; }
+>>>>>>> marion
 
 .biggest-login-wrapper {
   position: relative;
