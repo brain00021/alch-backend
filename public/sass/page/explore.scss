@@ -1,0 +1,151 @@
+.total-capital {
+    text-align: center;
+    color: $green;
+    h5 {
+        margin: 0;
+    }
+}
+
+.explore_tab {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    li {
+        display: flex;
+        align-items: center;
+        min-width: 19%;
+        margin: 0 auto;
+        a {
+            width: 100%;
+            text-align: center;
+            color: $explore_tab_text;
+            background-color: $explore_tab_bg;
+            padding: 2px 0;
+            border: 1px solid $explore_tab_text;
+            border-radius: 8px;
+            transition: .3s;
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $explore_tab_text;
+                color: $explore_tab_bg;
+                transition: .3s;
+                text-decoration: none;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            min-width: initial;
+            width: 32%;
+            margin: 0 3px 3px 0;
+            &:nth-child(4) {
+                width: 48%;
+            }
+            &:nth-child(5) {
+                width: 49%;
+            }
+        }
+    }
+}
+.explore-card{
+    position: relative;
+    .card-rating{
+        word-spacing: 1;
+        position: relative;
+        &:before{
+            content: '';
+            display: block;
+            width: 5px;
+            height: 2rem;
+            background-color:#3DABA0;
+            position: absolute;
+            left: -2rem;
+            top: 5px;
+        }
+    }
+    .explore-tag {
+        width: 60px;
+        height:20px;
+        border-radius: 10px;
+        position: absolute;
+        right: 1rem;
+        top:-8px;
+        box-shadow: 1px 1px 3px 1px $under-line;
+        &.new{
+            background-color: $new-badge;
+            &:before{
+                content: 'New';
+                color: #fff;
+                font-size: 1.5rem;
+                position: relative;
+                top:-5px;
+                left:15px;
+            }
+        }
+        &.popular{
+            background-color: $popular-badge;
+            &:before{
+                content: 'Popular';
+                color: #fff;
+                font-size: 1.5rem;
+                position: relative;
+                top:-5px;
+                left: 5px;
+            }
+        }
+        &.high{
+            background-color: $high-badge;
+            &:before{
+                content: 'High';
+                color: #fff;
+                font-size: 1.5rem;
+                position: relative;
+                top:-5px;
+                left:15px;
+            }
+        }
+        &.end{
+            background-color: $end-badge;
+            &:before{
+                content: 'End';
+                color: #fff;
+                font-size: 1.5rem;
+                position: relative;
+                top:-5px;
+                left:15px;
+            }
+        }
+    }
+    .row{
+        text-align: center;
+        [class*='col']{
+           padding:0 5px;
+           &:nth-child(4){
+               text-align: initial;
+           }
+        }
+    }
+    .interest-rate{
+        font-size: 2.5rem;
+        color:$green;
+    }
+    .invest-bal{
+        font-size:2.5rem;
+        color:#26BCBD;
+    }
+    .instellment{
+        font-size: 2.5rem;
+    }
+    p{
+        font-size: 1.3rem;
+        margin: 5px 0 ;
+
+    }
+    span{
+        font-size: 1.2rem;
+    }
+    .day-left{
+        color: $gray-title;
+        font-size: 1.5rem;
+    }
+}

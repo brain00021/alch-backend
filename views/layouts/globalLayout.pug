@@ -5,15 +5,28 @@ head
   meta(http-equiv='X-UA-Compatible', content='IE=edge')
   meta(name='viewport', content='width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0')
   link(rel='stylesheet', type='text/css', href='../public/css/plugins/bootstrap.css', )
+  // Animate.css
+  link(href='../public/css/plugins/animate.css', rel='stylesheet')
+  // Icomoon Icon Fonts
+  link(href='../public/css/plugins/icomoon.css', rel='stylesheet')
+  // Magnific Popup
+  link(href='../public/css/plugins/magnific-popup.css', rel='stylesheet')
+
+  //- link(rel='stylesheet', type='text/css', href='../public/css/font/fontawesome.min.css', )
   link(rel='stylesheet', type='text/css', href='../public/css/alchemy_style.css')
   body
     block header
-    .container-fluid
+      //- .container-fluid.js-container-wrapper
+    block newLoan-nav
+    block login-content
+    .container-fluid.js-container-wrapper
       block content
-    script(src='../public/js/jquery.min.js')
-    script(src='../public/js/bootstrap.min.js')
-    script(src='../public/js/common.js')
-    block js
+      script(src='../public/js/jquery.min.js')
+      script(src='../public/js/bootstrap.min.js')
+      script(src='../public/js/moment.js')
+      script(src='../public/js/bootstrap-datetimepicker.js')
+      script(src='../public/js/common.js')
+      block js
 
     //if lt IE 9
       script(src='https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')
