@@ -215,6 +215,43 @@ ul, li {
   .view-all :focus {
     color: #f7941d; }
 
+div[class$=-table] .t-head {
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+div[class$=-table] .t-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  div[class$=-table] .t-body .t-row {
+    width: 100%;
+    padding: .5rem 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: none; }
+    div[class$=-table] .t-body .t-row:hover {
+      background-color: #eeeeee;
+      cursor: pointer; }
+    div[class$=-table] .t-body .t-row > div {
+      min-width: 33%;
+      -ms-flex-item-align: center;
+      align-self: center; }
+
 .form-btn {
   width: 80%;
   margin: 20px auto; }
@@ -224,25 +261,35 @@ ul, li {
     padding: 10px;
     margin: 20px 5%;
     font-size: 1.5rem; }
-  .form-btn .btn {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s; }
-    .form-btn .btn:hover, .form-btn .btn:active, .form-btn .btn:focus {
-      background: #6daeef !important;
-      color: #fff;
-      outline: none !important; }
-  .form-btn .btn-alch {
-    background: #3f95ea;
+
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .btn:hover, .btn:active, .btn:focus {
+    background: #6daeef;
     color: #fff;
-    border: none !important;
-    border: 2px solid transparent !important; }
-    .form-btn .btn-alch:hover, .form-btn .btn-alch:active, .form-btn .btn-alch:focus {
-      -webkit-box-shadow: none;
-      box-shadow: none;
-      background: #3f95ea; }
+    outline: none !important; }
+
+.btn-alch {
+  background: #3f95ea;
+  color: #fff;
+  border: 2px solid transparent; }
+  .btn-alch:hover, .btn-alch:active, .btn-alch:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #3f95ea; }
+
+.green-btn {
+  background: #52d3aa;
+  color: #fff;
+  border: none; }
+  .green-btn:hover, .green-btn:active, .green-btn:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #7bddbe t; }
 
 header {
   font-family: "Lato", sans-serif;
@@ -575,100 +622,71 @@ header {
     padding-left: 5px;
     font-weight: 600; }
 
-.transaction-table .t-head {
-  width: 100%;
-  background-color: #f6f6f6;
-  border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around; }
+.transaction-table .t-row > div:first-child {
+  font-size: 2rem; }
+  @media only screen and (max-width: 500px) {
+    .transaction-table .t-row > div:first-child {
+      font-size: 1.8rem;
+      line-height: 1.3; } }
 
-.transaction-table .t-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
-  .transaction-table .t-body .t-row {
-    width: 100%;
-    padding: .5rem 1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: none; }
-    .transaction-table .t-body .t-row:hover {
-      background-color: #eeeeee;
-      cursor: pointer; }
-    .transaction-table .t-body .t-row > div {
-      min-width: 33%;
-      -ms-flex-item-align: center;
-      align-self: center; }
-    .transaction-table .t-body .t-row > div:first-child {
-      font-size: 2rem; }
-      @media only screen and (max-width: 500px) {
-        .transaction-table .t-body .t-row > div:first-child {
-          font-size: 1.8rem;
-          line-height: 1.3; } }
-    .transaction-table .t-body .t-row > div:last-child {
-      font-size: 2.5rem;
-      text-align: right; }
-      @media only screen and (max-width: 500px) {
-        .transaction-table .t-body .t-row > div:last-child {
-          font-size: 2rem;
-          line-height: 1.3; } }
-  .transaction-table .t-body .date {
-    font-size: 1.2rem;
-    padding: 0 .2rem;
-    line-height: 1;
-    text-align: left;
-    color: rgba(0, 0, 0, 0.5); }
-  .transaction-table .t-body .cashIn {
+.transaction-table .t-row > div:last-child {
+  font-size: 2.5rem;
+  text-align: right; }
+  @media only screen and (max-width: 500px) {
+    .transaction-table .t-row > div:last-child {
+      font-size: 2rem;
+      line-height: 1.3; } }
+
+.transaction-table .date {
+  font-size: 1.2rem;
+  padding: 0 .2rem;
+  line-height: 1;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5); }
+
+.transaction-table .cashIn {
+  color: #31c193; }
+  .transaction-table .cashIn > div:first-child {
     color: #31c193; }
-    .transaction-table .t-body .cashIn > div:first-child {
-      color: #31c193; }
-      .transaction-table .t-body .cashIn > div:first-child:before {
-        font-family: "Glyphicons Halflings";
-        content: "\e027";
-        position: relative;
-        left: -5px;
-        top: 3px; }
-  .transaction-table .t-body .cashOut {
-    color: #187cde; }
-    .transaction-table .t-body .cashOut > div:first-child:before {
+    .transaction-table .cashIn > div:first-child:before {
       font-family: "Glyphicons Halflings";
-      content: "\e026";
+      content: "\e027";
       position: relative;
       left: -5px;
       top: 3px; }
-  .transaction-table .t-body .pending:before {
+
+.transaction-table .cashOut {
+  color: #187cde; }
+  .transaction-table .cashOut > div:first-child:before {
     font-family: "Glyphicons Halflings";
-    content: "\e023";
+    content: "\e026";
     position: relative;
-    left: calc(50% - 2rem);
-    font-size: 3rem;
-    color: #848484; }
-  .transaction-table .t-body .confirm:before {
-    font-family: "Glyphicons Halflings";
-    content: "\e089";
-    position: relative;
-    left: calc(50% - 2rem);
-    font-size: 3rem;
-    color: #f7814d; }
-  .transaction-table .t-body .error:before {
-    font-family: "Glyphicons Halflings";
-    content: "\e088";
-    position: relative;
-    left: calc(50% - 2rem);
-    font-size: 3rem;
-    color: #ec2e14; }
+    left: -5px;
+    top: 3px; }
+
+.transaction-table .pending:before {
+  font-family: "Glyphicons Halflings";
+  content: "\e023";
+  position: relative;
+  left: calc(50% - 2rem);
+  font-size: 3rem;
+  color: #848484; }
+
+.transaction-table .confirm:before {
+  font-family: "Glyphicons Halflings";
+  content: "\e089";
+  position: relative;
+  left: calc(50% - 2rem);
+  font-size: 3rem;
+  color: #f7814d; }
+
+.transaction-table .error:before {
+  font-family: "Glyphicons Halflings";
+  content: "\e088";
+  position: relative;
+  left: calc(50% - 2rem);
+  font-size: 3rem;
+  color: #ec2e14; }
 
 ul[id^=detail] {
   width: 100%;
@@ -963,6 +981,55 @@ ul[id^=detail] {
   .explore-card .day-left {
     color: #7b7b7b;
     font-size: 1.5rem; }
+
+.installment {
+  right: 0; }
+  .installment h6 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  .installment .n-payment,
+  .installment .t-amount {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top; }
+  .installment a.btn.green-btn {
+    width: 40%;
+    margin: 2rem auto;
+    display: block; }
+  .installment .t-head {
+    height: 35px; }
+  .installment .t-body.collapse {
+    display: none;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+    .installment .t-body.collapse.in {
+      display: block;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s; }
+  .installment .t-row > div {
+    text-align: center;
+    width: 49%; }
+  .installment .switch {
+    position: absolute;
+    top: 5px;
+    text-align: right;
+    width: 100%;
+    height: 3rem; }
+    .installment .switch[aria-expanded="false"]:after {
+      font-family: "Glyphicons Halflings";
+      content: "\e252";
+      position: relative;
+      left: -5px;
+      top: 3px; }
+    .installment .switch[aria-expanded="true"]:after {
+      font-family: "Glyphicons Halflings";
+      content: "\e253";
+      position: relative;
+      left: -5px;
+      top: 3px; }
+  .installment .install-table {
+    position: relative; }
 
 .biggest-login-wrapper {
   position: relative;

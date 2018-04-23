@@ -1,0 +1,56 @@
+block content
+    .top-info
+        .row
+            .col-sm-6
+                ol.breadcrumb
+                    li
+                        a(href="#") Borrower
+                    li
+                        a(href="#") Installment Plan
+            .col-sm-6
+                .rating
+                    img(src="../public/images/rating_pic.png", alt="")
+                    |My Rating
+                    span.rating-level A1
+    .row
+        .col-sm-8.col-sm-offset-2.col-xs-12
+            .card-frame.installment
+                h6 Installment Plan
+                .plan-wrapper
+                    .n-payment
+                        b Next Payment
+                        p Amount:
+                            span $200
+                        p Due Date:
+                            span 2018/03/22
+                    .t-amount
+                        b Total Amount
+                        p Paid: 
+                            span $1300
+                            span /$2600
+                        .progress
+                            .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100', style='width:60%')
+                                | 50% Complete
+                a.btn.green-btn Payment
+                h6 Payment Record
+                .install-table
+                    .t-head
+                        div Amount
+                        div Date
+                    div.switch(data-toggle="collapse" href=" #ins-record" aria-expanded="false")
+                    #ins-record.t-body.collapse
+                        .t-row
+                            div $20
+                            div 2018-2-21
+                        .t-row
+                            div $20
+                            div 2018-2-21
+                        .t-row
+                            div $20
+                            div 2018-2-21
+                        .t-row
+                            div $20
+                            div 2018-2-21
+                        .t-row
+                            div $20
+                            div 2018-2-21
