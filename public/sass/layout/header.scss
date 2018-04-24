@@ -111,6 +111,9 @@ header {
     padding-top: 10px;
     z-index: 50;
     background: #f5fcfc;
+    @media screen and (max-width:460px) {
+        padding:1%;
+    }
 }
 
 //客服ICON + 選單ICON

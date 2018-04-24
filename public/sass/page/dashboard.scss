@@ -265,8 +265,6 @@ ul[id^=detail]{
             left:0;
             @include size(50px,50px);
             border-radius: 50%;
-
-
         }
         &:hover{
             color: lighten(#27bdbe,5%);
