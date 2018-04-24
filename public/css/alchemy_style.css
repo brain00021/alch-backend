@@ -336,7 +336,7 @@ header {
     padding: 16px; }
 
 .second-nav-bar {
-  background: #1c7055;
+  background: rgba(39, 152, 116, 0.5);
   position: relative;
   z-index: 50;
   display: none; }

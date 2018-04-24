@@ -72,7 +72,7 @@ header {
 
 // 第二層的navbar
 .second-nav-bar {
-    background: darken($green, 30%);
+    background: rgba(darken($green, 20%),0.5);
     position: relative;
     z-index: 50;
     display: none;
