@@ -216,15 +216,38 @@ ul[id^=detail] {
     width: 100%;
     padding: 0 2rem;
     margin-top: 3px;
-    background-color: $detail-bg;
-    border-radius: 5px;
-    .switch {
+    border-radius: 0px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color:$detail-bg;
+    .switch{
+        position: relative;
         text-align: center;
         font-size: large;
         border-top: 1px solid $form-hover;
         color: $form-label;
-        &:hover {
-            color: lighten(#27bdbe, 5%);
+        overflow: hidden;
+        cursor:pointer;
+      .glyphicon {
+           z-index: 50;
+           position: relative;
+           top:10px;
+        }
+        &:after{
+            content:'';
+            display: block;
+            position: absolute;
+            margin:auto;
+            bottom:-25px;
+            background: #ffffff;
+            right:0;
+            left:0;
+            @include size(50px,50px);
+            border-radius: 50%;
+
+
+        }
+        &:hover{
+            color: lighten(#27bdbe,5%);
         }
     }
 }

@@ -167,10 +167,11 @@ header {
     i.icon-chevron-down {
         margin-left: 5px;
     }
-    .drop-wrapper {
-        background: #fff;
-        color: #999999;
-        right: 10px;
+    .drop-wrapper{
+        background:#fff;
+        color:#999999;
+        right:10px;
+        display: none;
         position: absolute;
         box-shadow: 0 0 5px rgba(#000, 0.2);
         border-radius: 5px;
