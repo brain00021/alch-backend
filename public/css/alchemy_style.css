@@ -245,8 +245,7 @@ div[class$=-table] .t-body {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     background-color: none; }
     div[class$=-table] .t-body .t-row:hover {
-      background-color: #eeeeee;
-      cursor: pointer; }
+      background-color: #eeeeee; }
     div[class$=-table] .t-body .t-row > div {
       min-width: 33%;
       -ms-flex-item-align: center;
@@ -622,6 +621,9 @@ header {
     padding-left: 5px;
     font-weight: 600; }
 
+.transaction-table .t-row:hover {
+  cursor: pointer; }
+
 .transaction-table .t-row > div:first-child {
   font-size: 2rem; }
   @media only screen and (max-width: 500px) {
@@ -982,54 +984,88 @@ ul[id^=detail] {
     color: #7b7b7b;
     font-size: 1.5rem; }
 
-.installment {
-  right: 0; }
-  .installment h6 {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-  .installment .n-payment,
-  .installment .t-amount {
-    width: 49%;
-    display: inline-block;
-    vertical-align: top; }
-  .installment a.btn.green-btn {
-    width: 40%;
-    margin: 2rem auto;
-    display: block; }
-  .installment .t-head {
-    height: 35px; }
-  .installment .t-body.collapse {
-    display: none;
+.installment h6 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+.installment .n-payment,
+.installment .t-amount {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top; }
+
+.installment p {
+  color: #acacac; }
+
+.installment .blue-text {
+  color: #3f95ea;
+  font-size: larger;
+  margin: 0 2px; }
+
+.installment .orange-text {
+  color: #f7941d;
+  font-size: larger;
+  margin: 0 2px; }
+
+.installment .gray-text {
+  color: #7b7b7b;
+  font-size: larger;
+  margin: 0 2px; }
+
+.installment a.btn.green-btn {
+  width: 40%;
+  margin: 2rem auto;
+  display: block; }
+
+.installment .t-head {
+  height: 35px; }
+  .installment .t-head[aria-expanded="false"]::after {
+    font-family: "Glyphicons Halflings";
+    content: "\e114";
+    position: absolute;
+    right: 1rem;
+    top: 3px;
+    color: #562520; }
+  .installment .t-head[aria-expanded="true"]::after {
+    font-family: "Glyphicons Halflings";
+    content: "\e113";
+    position: absolute;
+    right: 1rem;
+    top: 3px;
+    color: #562520; }
+
+.installment .t-body.collapse {
+  display: none;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  position: relative; }
+  .installment .t-body.collapse.in {
+    display: block;
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: .5s; }
-    .installment .t-body.collapse.in {
-      display: block;
-      -webkit-transition: .5s;
-      -o-transition: .5s;
-      transition: .5s; }
-  .installment .t-row > div {
-    text-align: center;
-    width: 49%; }
-  .installment .switch {
-    position: absolute;
-    top: 5px;
-    text-align: right;
-    width: 100%;
-    height: 3rem; }
-    .installment .switch[aria-expanded="false"]:after {
-      font-family: "Glyphicons Halflings";
-      content: "\e252";
-      position: relative;
-      left: -5px;
-      top: 3px; }
-    .installment .switch[aria-expanded="true"]:after {
-      font-family: "Glyphicons Halflings";
-      content: "\e253";
-      position: relative;
-      left: -5px;
-      top: 3px; }
-  .installment .install-table {
-    position: relative; }
+
+.installment .t-row:hover {
+  cursor: none; }
+
+.installment .t-row > div {
+  text-align: center;
+  width: 49%; }
+
+.installment .install-table {
+  position: relative; }
+
+@media only screen and (max-width: 768px) {
+  .installment .n-payment,
+  .installment .t-amount {
+    width: 70%;
+    text-align: left;
+    margin: 0px 15%; }
+  .installment .t-amount {
+    margin-top: 20px; }
+  .installment .progress {
+    width: 80%;
+    margin: 0 auto; } }
 
 .biggest-login-wrapper {
   position: relative;

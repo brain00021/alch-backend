@@ -88,7 +88,6 @@ div[class$=-table] {
             background-color: none;
             &:hover {
                 background-color: darken($formhead-bg, 3%);
-                cursor: pointer;
             }
             >div {
                 min-width: 33%;

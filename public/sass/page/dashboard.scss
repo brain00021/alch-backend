@@ -130,6 +130,8 @@ $size: 20rem;
 //Lender dashboard 表格
 .transaction-table {
     .t-row {
+        &:hover{
+        cursor: pointer;}
         >div:first-child {
             font-size: 2rem;
             @media only screen and (max-width: 500px) {
