@@ -72,7 +72,7 @@ header {
 
 // 第二層的navbar
 .second-nav-bar {
-    background: darken($green, 30%);
+    background: rgba(darken($green, 20%),0.5);
     position: relative;
     z-index: 50;
     display: none;
@@ -111,6 +111,9 @@ header {
     padding-top: 10px;
     z-index: 50;
     background: #f5fcfc;
+    @media screen and (max-width:460px) {
+        padding:1%;
+    }
 }
 
 //客服ICON + 選單ICON

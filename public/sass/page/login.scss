@@ -261,10 +261,7 @@ textarea.input2 {
     width: 100%;
     padding: 1rem 2rem;
     margin: 1rem auto;
-    -webkit-box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
-    box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
-    border-radius: .5rem;
-    background-color: #fff;
+    @include box-style;
     .contact2-form-title{
         font-size:3rem;
     }
