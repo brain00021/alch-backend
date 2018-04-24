@@ -219,38 +219,27 @@ ul[id^=detail] {
     border-radius: 0px;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
     background-color:$detail-bg;
-    .switch{
-        position: relative;
-        text-align: center;
-        font-size: large;
-        border-top: 1px solid $form-hover;
-        color: $form-label;
-        overflow: hidden;
-        cursor:pointer;
-      .glyphicon {
-           z-index: 50;
-           position: relative;
-           top:10px;
-        }
+    position: relative;
         &:after{
-            content:'';
+            font-family: "Glyphicons Halflings";
+            content:"\e113";
+            @include size(24px,24px);
+            border-radius: 3px;
             display: block;
             position: absolute;
             margin:auto;
-            bottom:-25px;
-            background: #ffffff;
-            right:0;
-            left:0;
-            @include size(50px,50px);
-            border-radius: 50%;
-
-
+            color: #ffffff;
+            background-color:$form-label;
+            right:8px;
+            top:calc(50% - 12px);
+            text-align: center;   
+            &:hover{
+                color: lighten($green,5%);
+            }
         }
-        &:hover{
-            color: lighten(#27bdbe,5%);
-        }
+
     }
-}
+
 
 .announce-content {
     h6 {

@@ -8,6 +8,12 @@
         display: inline-block;
         vertical-align: top;
     }
+    .sub-title{
+        color: lighten($gray-title,10%);
+        text-align: center;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
     p {
         color: $gray-text;
     }
@@ -68,7 +74,7 @@
             width: 49%
         }
     }
-    .progress {}
+
     .install-table {
         position: relative;
     }
@@ -88,9 +94,9 @@
             margin-top: 20px;
         }
 
-        .progress {
-            width: 80%;
-            margin: 0 auto;
-        }
+        // .progress {
+        //     width: 80%;
+        //     margin: 0 auto;
+        // }
     }
 }
