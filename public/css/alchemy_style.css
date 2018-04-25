@@ -251,6 +251,57 @@ div[class$=-table] .t-body {
       -ms-flex-item-align: center;
       align-self: center; }
 
+div[class$=-table] .date {
+  font-size: 1.2rem;
+  padding: 0 .2rem;
+  line-height: 1;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.5); }
+
+div[class$=-table] .cashIn {
+  color: #31c193; }
+  div[class$=-table] .cashIn > div:first-child {
+    color: #31c193; }
+    div[class$=-table] .cashIn > div:first-child:before {
+      font-family: "Glyphicons Halflings";
+      content: "\e027";
+      position: relative;
+      left: -5px;
+      top: 3px; }
+
+div[class$=-table] .cashOut {
+  color: #187cde; }
+  div[class$=-table] .cashOut > div:first-child:before {
+    font-family: "Glyphicons Halflings";
+    content: "\e026";
+    position: relative;
+    left: -5px;
+    top: 3px; }
+
+div[class$=-table] .pending:before {
+  font-family: "Glyphicons Halflings";
+  content: "\e023";
+  position: relative;
+  left: calc(50% - 2rem);
+  font-size: 3rem;
+  color: #848484; }
+
+div[class$=-table] .confirm:before {
+  font-family: "Glyphicons Halflings";
+  content: "\e089";
+  position: relative;
+  left: calc(50% - 2rem);
+  font-size: 3rem;
+  color: #f7814d; }
+
+div[class$=-table] .error:before {
+  font-family: "Glyphicons Halflings";
+  content: "\e088";
+  position: relative;
+  left: calc(50% - 2rem);
+  font-size: 3rem;
+  color: #ec2e14; }
+
 .form-btn {
   width: 80%;
   margin: 20px auto; }
@@ -625,74 +676,32 @@ header {
     padding-left: 5px;
     font-weight: 600; }
 
-.transaction-table .t-row:hover {
+.transaction-table div.t-row:hover {
   cursor: pointer; }
 
-.transaction-table .t-row > div:first-child {
+.transaction-table div.t-row > div:first-child {
   font-size: 2rem; }
   @media only screen and (max-width: 500px) {
-    .transaction-table .t-row > div:first-child {
+    .transaction-table div.t-row > div:first-child {
       font-size: 1.8rem;
       line-height: 1.3; } }
 
-.transaction-table .t-row > div:last-child {
+.transaction-table div.t-row > div:last-child {
   font-size: 2.5rem;
   text-align: right; }
   @media only screen and (max-width: 500px) {
-    .transaction-table .t-row > div:last-child {
+    .transaction-table div.t-row > div:last-child {
       font-size: 2rem;
       line-height: 1.3; } }
 
-.transaction-table .date {
-  font-size: 1.2rem;
-  padding: 0 .2rem;
-  line-height: 1;
-  text-align: left;
-  color: rgba(0, 0, 0, 0.5); }
-
-.transaction-table .cashIn {
-  color: #31c193; }
-  .transaction-table .cashIn > div:first-child {
-    color: #31c193; }
-    .transaction-table .cashIn > div:first-child:before {
-      font-family: "Glyphicons Halflings";
-      content: "\e027";
-      position: relative;
-      left: -5px;
-      top: 3px; }
-
-.transaction-table .cashOut {
-  color: #187cde; }
-  .transaction-table .cashOut > div:first-child:before {
-    font-family: "Glyphicons Halflings";
-    content: "\e026";
-    position: relative;
-    left: -5px;
-    top: 3px; }
-
-.transaction-table .pending:before {
-  font-family: "Glyphicons Halflings";
-  content: "\e023";
-  position: relative;
-  left: calc(50% - 2rem);
-  font-size: 3rem;
-  color: #848484; }
-
-.transaction-table .confirm:before {
-  font-family: "Glyphicons Halflings";
-  content: "\e089";
-  position: relative;
-  left: calc(50% - 2rem);
-  font-size: 3rem;
-  color: #f7814d; }
-
-.transaction-table .error:before {
-  font-family: "Glyphicons Halflings";
-  content: "\e088";
-  position: relative;
-  left: calc(50% - 2rem);
-  font-size: 3rem;
-  color: #ec2e14; }
+.transaction-table div.t-row:last-child {
+  text-align: right;
+  color: #acacac;
+  border-bottom: none;
+  display: block; }
+  .transaction-table div.t-row:last-child i,
+  .transaction-table div.t-row:last-child span {
+    margin: 0 1px; }
 
 ul[id^=detail] {
   width: 100%;
@@ -1086,25 +1095,6 @@ ul[id^=detail] {
   .installment .t-amount {
     margin-top: 20px; } }
 
-.history-wrapper-cotent {
-  width: 100%;
-  padding: 1rem 2rem;
-  margin: 1rem auto;
-  -webkit-box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
-  box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
-  border-radius: .5rem;
-  background-color: #fff; }
-
-.history-page-number {
-  text-align: center; }
-  .history-page-number .pagination-sm > li > a,
-  .history-page-number .pagination-sm > li > span {
-    font-size: 1.2rem; }
-  @media screen and (max-width: 1200px) {
-    .history-page-number .pagination-sm > li > a,
-    .history-page-number .pagination-sm > li > span {
-      padding: 10px; } }
-
 .investments-table {
   text-align: center; }
   .investments-table ul.t-head {
@@ -1159,6 +1149,42 @@ ul[id^=detail] {
       font-weight: bold; }
     .investments-table .investments-status > div:last-child {
       font-size: 1.5rem; }
+
+.history-wrapper-content {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
+  border-radius: .5rem;
+  background-color: #fff; }
+  .history-wrapper-content .t-row:hover {
+    cursor: pointer; }
+  .history-wrapper-content .t-row > div:first-child {
+    font-size: 2rem; }
+    @media only screen and (max-width: 500px) {
+      .history-wrapper-content .t-row > div:first-child {
+        font-size: 1.8rem;
+        line-height: 1.3; } }
+  .history-wrapper-content .t-row > div:last-child {
+    text-align: right; }
+    @media only screen and (max-width: 500px) {
+      .history-wrapper-content .t-row > div:last-child {
+        line-height: 1.3; } }
+  .history-wrapper-content .b_history-table .t-body .t-row {
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly; }
+
+.history-page-number {
+  text-align: center; }
+  .history-page-number .pagination-sm > li > a,
+  .history-page-number .pagination-sm > li > span {
+    font-size: 1.2rem; }
+  @media screen and (max-width: 1200px) {
+    .history-page-number .pagination-sm > li > a,
+    .history-page-number .pagination-sm > li > span {
+      padding: 10px; } }
 
 .biggest-login-wrapper {
   position: relative;
@@ -1310,7 +1336,7 @@ textarea.input2 {
     width: 100%;
     max-width: 379px; }
 
-.login-wrapper-cotent {
+.login-wrapper-content {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
@@ -1419,7 +1445,7 @@ textarea.input2 {
   .green-bg:hover {
     background: #31c193; }
 
-.change-wrapper-cotent {
+.change-wrapper-content {
   width: 100%;
   padding: 1rem 2rem;
   margin: 1rem auto;
@@ -1427,7 +1453,7 @@ textarea.input2 {
   box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem rgba(0, 0, 0, 0.2);
   border-radius: .5rem;
   background-color: #fff; }
-  .change-wrapper-cotent .contact2-form-title {
+  .change-wrapper-content .contact2-form-title {
     font-size: 3rem; }
 
 .change-wrapper {
