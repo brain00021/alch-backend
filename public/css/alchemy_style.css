@@ -1196,29 +1196,61 @@ ul[id^=detail] {
           border-width: 20px 25px 0 25px;
           border-color: #52d3aa transparent transparent transparent; }
 
-.login-wrapper {
+.login-wrapper,
+.change-wrapper {
   position: relative;
   height: 100%;
   *zoom: 1;
   /*---------------------------------------------*/
   /*---------------------------------------------*/ }
-  .login-wrapper:after, .login-wrapper:before {
+  .login-wrapper:after, .login-wrapper:before,
+  .change-wrapper:after,
+  .change-wrapper:before {
     content: "";
     display: table; }
-  .login-wrapper:after {
+  .login-wrapper:after,
+  .change-wrapper:after {
     clear: both; }
-  .login-wrapper input {
+  .login-wrapper input,
+  .change-wrapper input {
     outline: none;
     border: none; }
-  .login-wrapper textarea {
+  .login-wrapper textarea,
+  .change-wrapper textarea {
     outline: none;
     border: none; }
-    .login-wrapper textarea:focus {
+    .login-wrapper textarea:focus,
+    .change-wrapper textarea:focus {
       border-color: transparent !important; }
-  .login-wrapper input, .login-wrapper textarea.input:focus, .login-wrapper textarea:focus {
+  .login-wrapper input, .login-wrapper textarea.input:focus, .login-wrapper textarea:focus,
+  .change-wrapper input,
+  .change-wrapper textarea.input:focus,
+  .change-wrapper textarea:focus {
     border-color: transparent !important; }
-    .login-wrapper input::-webkit-input-placeholder, .login-wrapper input:-moz-placeholder, .login-wrapper input::-moz-placeholder, .login-wrapper input:-ms-input-placeholder, .login-wrapper textarea.input:focus::-webkit-input-placeholder, .login-wrapper textarea.input:focus:-moz-placeholder, .login-wrapper textarea.input:focus::-moz-placeholder, .login-wrapper textarea.input:focus:-ms-input-placeholder, .login-wrapper textarea:focus::-webkit-input-placeholder, .login-wrapper textarea:focus:-moz-placeholder, .login-wrapper textarea:focus::-moz-placeholder, .login-wrapper textarea:focus:-ms-input-placeholder {
+    .login-wrapper input::-webkit-input-placeholder, .login-wrapper input:-moz-placeholder, .login-wrapper input::-moz-placeholder, .login-wrapper input:-ms-input-placeholder, .login-wrapper textarea.input:focus::-webkit-input-placeholder, .login-wrapper textarea.input:focus:-moz-placeholder, .login-wrapper textarea.input:focus::-moz-placeholder, .login-wrapper textarea.input:focus:-ms-input-placeholder, .login-wrapper textarea:focus::-webkit-input-placeholder, .login-wrapper textarea:focus:-moz-placeholder, .login-wrapper textarea:focus::-moz-placeholder, .login-wrapper textarea:focus:-ms-input-placeholder,
+    .change-wrapper input::-webkit-input-placeholder,
+    .change-wrapper input:-moz-placeholder,
+    .change-wrapper input::-moz-placeholder,
+    .change-wrapper input:-ms-input-placeholder,
+    .change-wrapper textarea.input:focus::-webkit-input-placeholder,
+    .change-wrapper textarea.input:focus:-moz-placeholder,
+    .change-wrapper textarea.input:focus::-moz-placeholder,
+    .change-wrapper textarea.input:focus:-ms-input-placeholder,
+    .change-wrapper textarea:focus::-webkit-input-placeholder,
+    .change-wrapper textarea:focus:-moz-placeholder,
+    .change-wrapper textarea:focus::-moz-placeholder,
+    .change-wrapper textarea:focus:-ms-input-placeholder {
       color: transparent; }
+
+.change-wrapper {
+  *zoom: 1;
+  padding: 0px;
+  height: auto; }
+  .change-wrapper:after, .change-wrapper:before {
+    content: "";
+    display: table; }
+  .change-wrapper:after {
+    clear: both; }
 
 .wrap-input2 {
   width: 100%;
@@ -1429,15 +1461,5 @@ textarea.input2 {
   background-color: #fff; }
   .change-wrapper-cotent .contact2-form-title {
     font-size: 3rem; }
-
-.change-wrapper {
-  *zoom: 1;
-  padding: 0px;
-  height: auto; }
-  .change-wrapper:after, .change-wrapper:before {
-    content: "";
-    display: table; }
-  .change-wrapper:after {
-    clear: both; }
 
 /*# sourceMappingURL=alchemy_style.css.map */
