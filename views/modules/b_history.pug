@@ -1,41 +1,38 @@
 block content
+    .top-info
+        .row
+            .col-sm-6
+                ol.breadcrumb
+                    li
+                        a(href="#") Borrower
+                    li
+                        a(href="#") History
     .biggest-chagepass-wrapper
         .change-wrapper
-            .col-xs-12.col-sm-6.col-md-4
-                .card-frame.history-wrapper-cotent
-                    h6 History
+            .col-md-4.col-md-offset-0.col-sm-10.col-sm-offset-1.col-xs-12
+                .card-frame.history-wrapper-content
+                    h6 Payment Record
                         a.view-all View All
-                    .transaction-table
+                    .b_history-table
                         .t-head
-                            div Type
-                            div Status
                             div Amount
+                            div Date
                         .t-body
-                            .t-row.cashIn
-                                div Cash In
-                                    .date 2017-12-11
-                                div.pending
+                            .t-row
                                 div $30540
-                            .t-row.cashIn
-                                div Cash In
-                                    .date 2017-12-11
-                                div.confirm
+                                .date 2017-12-11
+                            .t-row
                                 div $51100
-                            .t-row.cashOut
-                                div Cash Out
-                                    .date 2017-12-11
-                                div.pending
+                                .date 2017-12-11
+                            .t-row
                                 div $50880.32
-                            .t-row.cashOut
-                                div Cash Out
-                                    .date 2017-12-11
-                                div.pending
+                                .date 2017-12-11                 
+                            .t-row
                                 div $50880.32
-                            .t-row.cashOut
-                                div Cash Out
-                                    .date 2017-12-11
-                                div.error
+                                .date 2017-12-11                           
+                            .t-row
                                 div $50880.32
+                                .date 2017-12-11                             
                     .history-page-number
                         nav(aria-label='Page navigation')
                             ul.pagination.pagination-sm

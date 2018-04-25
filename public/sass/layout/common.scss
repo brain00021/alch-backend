@@ -95,8 +95,72 @@ div[class$=-table] {
             }
         }
     }
+    
+    .date {
+        font-size: 1.2rem;
+        padding: 0 .2rem;
+        line-height: 1;
+        text-align: left;
+        color: $date-text;
+    }
+    .cashIn {
+        color: $cashIn;
+        >div:first-child {
+            color: $cashIn;
+            &:before {
+                font-family: "Glyphicons Halflings";
+                content: "\e027";
+                position: relative;
+                left: -5px;
+                top: 3px;
+            }
+        }
+    }
+    .cashOut {
+        color: $cashOut;
+        >div:first-child {
+            &:before {
+                font-family: "Glyphicons Halflings";
+                content: "\e026";
+                position: relative;
+                left: -5px;
+                top: 3px;
+            }
+        }
+    }
+    .pending {
+        &:before {
+            font-family: "Glyphicons Halflings";
+            content: "\e023";
+            position: relative;
+            left: calc(50% - 2rem);
+            font-size: 3rem;
+            color: $pending;
+        }
+    }
+    .confirm {
+        &:before {
+            font-family: "Glyphicons Halflings";
+            content: "\e089";
+            position: relative;
+            left: calc(50% - 2rem);
+            font-size: 3rem;
+            color: $confirm;
+        }
+    }
+    .error {
+        &:before {
+            font-family: "Glyphicons Halflings";
+            content: "\e088";
+            position: relative;
+            left: calc(50% - 2rem);
+            font-size: 3rem;
+            color: $error;
+        }
+    }
 }
 
+//按鈕
 .form-btn {
     width: 80%;
     margin: 20px auto;

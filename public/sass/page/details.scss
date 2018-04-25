@@ -1,0 +1,57 @@
+//  detail
+.investments-table {
+    text-align: center;
+    ul.t-head {
+        width: 100%;
+        background: gray;
+        display: flex;
+        justify-content: space-around;
+        li {
+            width: 24%;
+            color: #fff;
+            display: inline-block;
+        }
+        border-bottom: 1px solid $under-line;
+    }
+    .t-body {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .t-row {
+            width: 100%;
+            padding: .5rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $under-line;
+            background-color: none;
+            &:hover {
+                background-color: darken($formhead-bg, 3%);
+                cursor: pointer;
+            }
+        }
+    }
+    .investments-status {
+        &:nth-child(even) {
+            background-color: #fbfbfb;
+        }
+        >div {
+            width: 24%;
+            display: inline-block;
+            text-align: center;
+            justify-content: space-around;
+            &:first-child,
+            &:nth-child(3) {
+                color: $blue;
+                font-size: 1.8rem;
+            }
+            &:nth-child(2) {
+                color: gray;
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+            &:last-child {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

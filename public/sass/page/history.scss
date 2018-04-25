@@ -1,80 +1,46 @@
 // 歷史紀錄 &&  詳情
-.history-wrapper-cotent{
-        width: 100%;
-        padding: 1rem 2rem;
-        margin: 1rem auto;
-        @include box-style;
+.history-wrapper-content {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    @include box-style;
+    .t-row {
+        &:hover {
+            cursor: pointer;
+        }
+        >div:first-child {
+            font-size: 2rem;
+            @media only screen and (max-width: 500px) {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+        }
+        >div:last-child {
+            // font-size: 2.5rem;
+            text-align: right;
+            @media only screen and (max-width: 500px) {
+                // font-size: 2rem;
+                line-height: 1.3;
+            }
+        }
+    }
+    .b_history-table{
+        .t-body .t-row{
+            justify-content: space-evenly;
+        }
+
+    }
 }
- .history-page-number{
-     text-align: center;
-     .pagination-sm>li>a,
-     .pagination-sm>li>span{
-         font-size: 1.2rem;
-     }
-     @media screen and (max-width:1200px) {
+    .history-page-number {
+        text-align: center;
         .pagination-sm>li>a,
         .pagination-sm>li>span {
-             padding:10px;
-         }
-     }
- }
-//  detail
-.investments-table{
-    text-align: center;
-    ul.t-head{
-        width:100%;
-        background:gray;
-        display: flex;
-        justify-content: space-around;
-        li{
-            width:24%;
-            color:#fff;
-            display: inline-block;
+            font-size: 1.2rem;
         }
-        border-bottom: 1px solid $under-line;
-    }
-    .t-body {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        .t-row {
-            width: 100%;
-            padding: .5rem 1rem;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid $under-line;
-            background-color: none;
-
-            &:hover {
-                background-color: darken($formhead-bg, 3%);
-                cursor: pointer;
-            }
-        }
-        
-    }
-    .investments-status{
-        &:nth-child(even) {
-            background-color: #fbfbfb;
-        }
-        >div{
-            width:24%;
-            display:inline-block;
-            text-align: center;
-            justify-content: space-around;
-            &:first-child,&:nth-child(3){
-                color:$blue;
-                font-size: 1.8rem;
-            }
-            &:nth-child(2){
-                color:gray;
-                font-size: 1.8rem;
-                font-weight:bold;
-            }
-            &:last-child{
-                font-size: 1.5rem;
+        @media screen and (max-width:1200px) {
+            .pagination-sm>li>a,
+            .pagination-sm>li>span {
+                padding: 10px;
             }
         }
     }
-
-
-}
