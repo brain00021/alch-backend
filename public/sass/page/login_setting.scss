@@ -42,7 +42,7 @@
         }
     }
 }
-.login-wrapper{
+.login-wrapper,.change-wrapper {
     position: relative;
     height:100%;
     @include pie-clearfix;
@@ -54,6 +54,11 @@
     }
     input,textarea.input:focus,textarea:focus {border-color: transparent !important;&::-webkit-input-placeholder,&:-moz-placeholder,&::-moz-placeholder,&:-ms-input-placeholder {color: transparent;}}
     /*---------------------------------------------*/
+}
+.change-wrapper {
+    @include pie-clearfix;
+    padding: 0px;
+    height: auto;
 }
 // form設計
 .wrap-input2 {
@@ -265,9 +270,4 @@ textarea.input2 {
     .contact2-form-title{
         font-size:3rem;
     }
-}
-.change-wrapper{
-    @include pie-clearfix;
-    padding:0px;
-    height:auto;
 }
