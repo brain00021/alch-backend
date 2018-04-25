@@ -1,0 +1,42 @@
+block content
+    .top-info
+        .row
+            .col-sm-6
+                ol.breadcrumb
+                    li
+                        a(href="#") Borrower
+                    li
+                        a(href="#") Detail
+            .col-sm-6
+                .rating
+                    img(src="../public/images/rating_pic.png", alt="")
+                    |My Rating
+                    span.rating-level A1
+    .row
+    - for (i = 0; i <= 6; i++)
+        .col-md-4.col-sm-6.col-xs-12
+            .card-frame.b-detail-card
+                .card-rating Rating: A1
+                    .purpose 目的: Rent
+                .row
+                    .col-xs-5
+                        .instellment 24
+                            p 期數(月)
+                    .col-xs-7
+                        .total Total:
+                            span $1700
+                        .goal Goal:
+                            span $6000
+                    .col-xs-12 
+                        p schedule:
+                    .col-xs-9
+                        .progress
+                            .progress-bar.progress-bar-warning(role='progressbar', aria-valuenow='56', aria-valuemin='0', aria-valuemax='100', style='width:60%')
+                                | 56%
+                    .col-xs-8
+                        .dueDate 
+                            i.glyphicon.glyphicon-calendar
+                            |到期日:2018/9/12
+                    .col-xs-4
+                        .day-left 12
+                            span d left

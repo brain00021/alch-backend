@@ -1150,6 +1150,49 @@ ul[id^=detail] {
     .investments-table .investments-status > div:last-child {
       font-size: 1.5rem; }
 
+.b-detail-card {
+  position: relative; }
+  .b-detail-card .purpose, .b-detail-card .card-rating {
+    word-spacing: 1;
+    position: relative;
+    color: #7b7b7b;
+    font-weight: 600;
+    margin-bottom: 10px; }
+  .b-detail-card .card-rating:before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 4rem;
+    background-color: #3759cd;
+    position: absolute;
+    left: -2rem;
+    top: 5px; }
+  .b-detail-card .instellment {
+    text-align: center;
+    font-size: 2.5rem; }
+    .b-detail-card .instellment p {
+      font-size: 1.3rem; }
+  .b-detail-card .total,
+  .b-detail-card .goal {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600; }
+    .b-detail-card .total span,
+    .b-detail-card .goal span {
+      font-size: 2rem;
+      color: #acacac;
+      margin-left: 5px; }
+  .b-detail-card .goal span {
+    color: #3f95ea; }
+  .b-detail-card span {
+    font-size: 1.5rem; }
+  .b-detail-card .dueDate i {
+    padding-right: 5px;
+    color: rgba(0, 0, 0, 0.5); }
+  .b-detail-card .day-left {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.8rem; }
+
 .history-wrapper-content {
   width: 100%;
   padding: 1rem 2rem;

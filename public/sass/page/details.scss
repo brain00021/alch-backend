@@ -1,4 +1,4 @@
-//  detail
+//  detail lender
 .investments-table {
     text-align: center;
     ul.t-head {
@@ -53,5 +53,66 @@
                 font-size: 1.5rem;
             }
         }
+    }
+}
+
+//borrower detail
+.b-detail-card {
+    position: relative;
+    .purpose {
+        word-spacing: 1;
+        position: relative;
+        color: $gray-title;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .card-rating {
+        @extend .purpose;
+        &:before {
+            content: '';
+            display: block;
+            width: 5px;
+            height: 4rem;
+            background-color: rgb(55, 89, 205);
+            position: absolute;
+            left: -2rem;
+            top: 5px;
+        }
+    }
+    .instellment {
+        text-align: center;
+        font-size: 2.5rem;
+        p {
+            font-size: 1.3rem;
+        }
+    }
+    .total,
+    .goal {
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 600;
+        span {
+            font-size: 2rem;
+            color: $gray-text;
+            margin-left: 5px;
+        }
+    }
+    .goal {
+        span {
+            color: $blue;
+        }
+    }
+    span {
+        font-size: 1.5rem;
+    }
+    .dueDate{
+        i{
+            padding-right:5px;
+            color:$date-text;
+        }
+    }
+    .day-left {
+        color: $date-text;
+        font-size: 1.8rem;
     }
 }
