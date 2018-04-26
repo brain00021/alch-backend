@@ -12,12 +12,12 @@
     z-index: 2;
     flex-wrap: wrap;
     @media only screen and (max-width: 1023px) {
-        width: 100%;
+        width: 350vw;
         left: 0px;
     }
     li {
         display: flex;
-        align-items: center; 
+        align-items: center;
         min-width: 14%;
         margin: 0 auto;
         line-height: 1.2;
@@ -67,7 +67,7 @@
 .popMsg {
     text-align: right;
     margin-top: -3px;
-    color:#7b7b7b;
+    color: #7b7b7b;
     font-weight: 300;
     &:before {
         font-family: "Glyphicons Halflings";
@@ -127,6 +127,17 @@
                     font-size: 2rem;
                     color: #ccc;
                 }
+            }
+        }
+        .step7.active {
+            width: 100vw;
+            &:after {
+                content: " ";
+                position: absolute;
+                right:-50vw;
+                background-color: $newLoan-nav-bg;
+                width: 50vw;
+                height: 70px;
             }
         }
     }

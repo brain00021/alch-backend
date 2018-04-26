@@ -766,7 +766,7 @@ ul[id^=detail] {
   flex-wrap: wrap; }
   @media only screen and (max-width: 1023px) {
     .newloan-nav {
-      width: 100%;
+      width: 350vw;
       left: 0px; } }
   .newloan-nav li {
     display: -webkit-box;
@@ -870,7 +870,16 @@ ul[id^=detail] {
           position: absolute;
           right: 0;
           font-size: 2rem;
-          color: #ccc; } }
+          color: #ccc; }
+    .newloan-nav .step7.active {
+      width: 100vw; }
+      .newloan-nav .step7.active:after {
+        content: " ";
+        position: absolute;
+        right: -50vw;
+        background-color: #E3F7F3;
+        width: 50vw;
+        height: 70px; } }
 
 .total-capital {
   text-align: center;
