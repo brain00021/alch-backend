@@ -45,6 +45,7 @@
 .login-wrapper,.change-wrapper {
     position: relative;
     height:100%;
+    background:#fff;
     @include pie-clearfix;
     //input default 
     /*---------------------------------------------*/
@@ -189,12 +190,10 @@ textarea.input2 {
     color:gray;
 }
 .button-wrapper2{
-    position: absolute;
-    bottom:0;
+    position: relative;
+    margin:15px auto;
     padding:15px;
     margin:auto;
-    left:0;
-    right:0;
     text-align: center;
     span{
         color:gray;
@@ -216,9 +215,11 @@ textarea.input2 {
     position: relative;
     padding:0;
     overflow: hidden;
+
     height: 100%;
     .wallpaper{
-        width:100%;min-width: 1030px;
+        width:auto;
+        min-width: 100%;
     }
     .grandient-bg{
         @include size(100%,100%);
