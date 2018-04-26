@@ -66,6 +66,101 @@
     }
 }
 
+//lender dashboard, borrower installment 表格
+div[class$=-table] {
+    .t-head {
+        width: 100%;
+        background-color: $formhead-bg;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .t-body {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        .t-row {
+            width: 100%;
+            padding: .5rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $under-line;
+            background-color: none;
+            &:hover {
+                background-color: darken($formhead-bg, 3%);
+            }
+            >div {
+                min-width: 33%;
+                align-self: center;
+            }
+        }
+    }
+    
+    .date {
+        font-size: 1.2rem;
+        padding: 0 .2rem;
+        line-height: 1;
+        text-align: left;
+        color: $date-text;
+    }
+    .cashIn {
+        color: $cashIn;
+        >div:first-child {
+            color: $cashIn;
+            &:before {
+                font-family: "Glyphicons Halflings";
+                content: "\e027";
+                position: relative;
+                left: -5px;
+                top: 3px;
+            }
+        }
+    }
+    .cashOut {
+        color: $cashOut;
+        >div:first-child {
+            &:before {
+                font-family: "Glyphicons Halflings";
+                content: "\e026";
+                position: relative;
+                left: -5px;
+                top: 3px;
+            }
+        }
+    }
+    .pending {
+        &:before {
+            font-family: "Glyphicons Halflings";
+            content: "\e023";
+            position: relative;
+            left: calc(50% - 2rem);
+            font-size: 3rem;
+            color: $pending;
+        }
+    }
+    .confirm {
+        &:before {
+            font-family: "Glyphicons Halflings";
+            content: "\e089";
+            position: relative;
+            left: calc(50% - 2rem);
+            font-size: 3rem;
+            color: $confirm;
+        }
+    }
+    .error {
+        &:before {
+            font-family: "Glyphicons Halflings";
+            content: "\e088";
+            position: relative;
+            left: calc(50% - 2rem);
+            font-size: 3rem;
+            color: $error;
+        }
+    }
+}
+
+//按鈕
 .form-btn {
     width: 80%;
     margin: 20px auto;
@@ -76,29 +171,41 @@
         margin: 20px 5%;
         font-size: 1.5rem;
     }
-    .btn {
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        transition: 0.3s;
-        &:hover,
-        &:active,
-        &:focus {
-            background: lighten($blue,10%) !important;
-            color: #fff;
-            outline: none !important;
-        }
-    }
-    .btn-alch {
-        background: $blue;
-        color: #fff;
-        border: none !important;
-        border: 2px solid transparent !important;
-        &:hover,
-        &:active,
-        &:focus {
-            box-shadow: none;
-            background: $blue;
-        }
-    }
+}
 
+.btn {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    &:hover,
+    &:active,
+    &:focus {
+        background: lighten($blue, 10%);
+        color: #fff;
+        outline: none !important;
+    }
+}
+
+.btn-alch {
+    background: $blue;
+    color: #fff;
+    border: 2px solid transparent;
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: none;
+        background: $blue;
+    }
+}
+
+.green-btn {
+    background: $green;
+    color: #fff;
+    border: none;
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: none;
+        background:lighten($green,10%) t;
+    }
 }

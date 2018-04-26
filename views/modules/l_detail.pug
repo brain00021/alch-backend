@@ -1,0 +1,40 @@
+block content
+    .top-info
+        .row
+            .col-sm-6
+                ol.breadcrumb
+                    li
+                        a(href="#") Lender
+                    li
+                        a(href="#") Detail
+    .row
+        .col-lg-6.col-md-12
+            .card-frame.current-invest
+                h6 Total Investment
+                .row
+                    .col-sm-6
+                        ul.invest-total
+                            li  Total:
+                            li  $30,000.67
+                    .col-sm-6
+                        ul.invest-detail
+                            li  Average annual interest rate:
+                                span 7%
+                            li  Estimated expiry rate of return:
+                                span 14.85%
+                .last-transaction
+                    h6 Investments
+                        a.view-all View All
+                    .investments-table
+                        ul.t-head
+                            li Rating
+                            li Annual Interest
+                            li Invest Amount
+                            li Due Date
+                        .t-body
+                        - for (i = 0; i <= 6; i++)
+                            .t-row.investments-status
+                                div A
+                                div 3%
+                                div $30540
+                                div.date 2017-12-11

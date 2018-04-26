@@ -91,162 +91,99 @@ $size: 20rem;
     display: table-cell;
     vertical-align: middle;
 }
+
 //Lender Dashboard
-.current-invest{
-    h6{
+.current-invest {
+    h6 {
         border-bottom: 1px solid $under-line;
     }
-    .invest-total{
-        li:last-child{
+    .invest-total {
+        li:last-child {
             font-size: 3rem;
             font-weight: bold;
             color: $blue;
         }
     }
-    .invest-detail{
+    .invest-detail {
         border-left: 1px solid #7c7c7c;
-        padding-left:1rem;
-        li{
+        padding-left: 1rem;
+        li {
             margin-bottom: 10px;
         }
-        @media only screen and (max-width:768px) {
+        @media only screen and (max-width:767px) {
             border-left: none;
             border-top: 1px solid $under-line;
-            margin:10px 0 0;
-            padding:10px 0 0;
-           }
+            margin: 10px 0 0;
+            padding: 10px 0 0;
+        }
     }
-    li{
-        color:$gray-text;
+    li {
+        color: $gray-text;
         line-height: 1.3;
-        span{
+        span {
             padding-left: 5px;
-            font-weight:600;
+            font-weight: 600;
         }
     }
 }
 
 //Lender dashboard 表格
 .transaction-table {
-    .t-head {
-        width: 100%;
-        background-color: $formhead-bg;
-        border-radius: 5px;
-        display: flex;
-        justify-content: space-around;
-    }
-    .t-body {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap:wrap;
-        .t-row {
-            width: 100%;
-            padding: .5rem 1rem;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid $under-line;
-            background-color:none;
-            &:hover{
-                background-color:darken($formhead-bg,3%);
-                cursor: pointer;
-            }
-            >div{
-                min-width:33%;
-                align-self: center;
-            }
-            >div:first-child{
-               font-size: 2rem;
-               @media only screen and (max-width:500px) {
-                font-size: 1.8rem;   
-                line-height:1.3;
-               }
-            }
-            >div:last-child{
-                font-size: 2.5rem;
-                text-align: right;
-                @media only screen and (max-width:500px) {
-                    font-size: 2rem;   
-                    line-height:1.3;
-                   }
+    div.t-row {
+        &:hover {
+            cursor: pointer;
+        }
+        >div:first-child {
+            font-size: 2rem;
+            @media only screen and (max-width: 500px) {
+                font-size: 1.8rem;
+                line-height: 1.3;
             }
         }
-        .date{
-            font-size: 1.2rem;
-            padding:0 .2rem;
-            line-height: 1;
-            text-align: left;
-            color: $date-text;
-        }
-        .cashIn{
-            color:$cashIn;
-            >div:first-child {
-            color: $cashIn;
-            &:before {
-                font-family: "Glyphicons Halflings";
-                content: "\e027";
-                position: relative;
-                left: -5px;
-                top: 3px;
-            }}
-        }
-        .cashOut{
-            color: $cashOut;
-            >div:first-child {
-
-            &:before {
-                font-family: "Glyphicons Halflings";
-                content: "\e026";
-                position: relative;
-                left: -5px;
-                top: 3px;
-            }}
-        }
-        .pending {
-            &:before {
-                font-family: "Glyphicons Halflings";
-                content:"\e023";
-                position: relative;
-                left:calc(50% - 2rem);
-                font-size: 3rem;
-                color: $pending;
+        >div:last-child {
+            font-size: 2.5rem;
+            text-align: right;
+            @media only screen and (max-width: 500px) {
+                font-size: 2rem;
+                line-height: 1.3;
             }
         }
-        .confirm {
-            &:before {
-                font-family: "Glyphicons Halflings";
-                content:"\e089";
-                position: relative;
-                left:calc(50% - 2rem);
-                font-size: 3rem;
-                color: $confirm;
-            }
-        }
-        .error {
-            &:before {
-                font-family: "Glyphicons Halflings";
-                content:"\e088";
-                position: relative;
-                left:calc(50% - 2rem);
-                font-size: 3rem;
-                color: $error;
-
+        &:last-child {
+            text-align: right;
+            color: $gray-text;
+            border-bottom: none;
+            display: block;
+            i,
+            span {
+                margin: 0 1px;
             }
         }
     }
 }
-ul[id^=detail]{
+
+ul[id^=detail] {
     width: 100%;
     padding: 0 2rem;
     margin-top: 3px;
-    background-color:$detail-bg;
-    border-radius: 5px;
-    .switch{
+    border-radius: 0px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: $detail-bg;
+    position: relative;
+    &:after {
+        font-family: "Glyphicons Halflings";
+        content: "\e113";
+        @include size(24px, 24px);
+        border-radius: 3px;
+        display: block;
+        position: absolute;
+        margin: auto;
+        color: #ffffff;
+        background-color: $form-label;
+        right: 8px;
+        top: calc(50% - 12px);
         text-align: center;
-        font-size: large;
-        border-top: 1px solid $form-hover;
-        color: $form-label;
-        &:hover{
-            color: lighten(#27bdbe,5%);
+        &:hover {
+            color: lighten($green, 5%);
         }
     }
 }

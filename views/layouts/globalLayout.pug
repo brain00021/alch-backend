@@ -16,9 +16,12 @@ head
   link(rel='stylesheet', type='text/css', href='../public/css/alchemy_style.css')
   body
     block header
+      //- .container-fluid.js-container-wrapper
     block newLoan-nav
     block login-content
-    block content
+    .container-fluid.js-container-wrapper 
+      .mob-header-bg
+      block content
     script(src='../public/js/jquery.min.js')
     script(src='../public/js/bootstrap.min.js')
     script(src='../public/js/moment.js')

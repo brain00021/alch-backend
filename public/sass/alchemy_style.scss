@@ -1,7 +1,7 @@
-// plugin&var
+// plugin&var&element
 @import 'color';
 @import 'template';
-@import 'elate/nav-icon';
+@import 'layout/nav-icon'; 
 
 // 共同框架
 @import 'layout/reset';
@@ -11,9 +11,8 @@
 @import 'page/dashboard';
 @import 'page/newLoan';
 @import 'page/explore';
-@import 'page/installment';
+@import 'page/payment';
 @import 'page/details';
 @import 'page/profile';
-@import 'page/setting';	
 @import 'page/history';
-@import 'page/login';
+@import 'page/login_setting';

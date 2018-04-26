@@ -1,0 +1,46 @@
+// 歷史紀錄 &&  詳情
+.history-wrapper-content {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    @include box-style;
+    .t-row {
+        &:hover {
+            cursor: pointer;
+        }
+        >div:first-child {
+            font-size: 2rem;
+            @media only screen and (max-width: 500px) {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+        }
+        >div:last-child {
+            // font-size: 2.5rem;
+            text-align: right;
+            @media only screen and (max-width: 500px) {
+                // font-size: 2rem;
+                line-height: 1.3;
+            }
+        }
+    }
+    .b_history-table{
+        .t-body .t-row{
+            justify-content: space-evenly;
+        }
+
+    }
+}
+    .history-page-number {
+        text-align: center;
+        .pagination-sm>li>a,
+        .pagination-sm>li>span {
+            font-size: 1.2rem;
+        }
+        @media screen and (max-width:1200px) {
+            .pagination-sm>li>a,
+            .pagination-sm>li>span {
+                padding: 10px;
+            }
+        }
+    }

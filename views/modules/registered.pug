@@ -1,25 +1,28 @@
 block login-content
     .biggest-login-wrapper
         .login-wrapper
-            .col-sm-12.col-md-4.login-wrapper-content
+            .col-sm-12.col-md-3.login-wrapper-content
                 .logo
                     img(src="../public/images/logo-color.png", alt="")
+                span.contact2-form-title Create an Account
                 .tab-content
                     a.active(href='#') Borrower
                     a(href='#') Lender
-                .wrap-input2.validate-input(data-validate='Name is required')
-                    input.input2(name='name', type='text')
-                    span.focus-input2(data-placeholder='Username')
+                .wrap-input2.validate-input(data-validate='Email is required')
+                    input.input2(name='Email', type='text')
+                    span.focus-input2(data-placeholder='Email')
                 .wrap-input2.validate-input(data-validate='Password is required')
                     input.input2(name='Password', type='text')
                     span.focus-input2(data-placeholder='Password')
+                .wrap-input2.validate-input(data-validate='ConfirmPassword is required')
+                    input.input2(name='ConfirmPassword', type='text')
+                    span.focus-input2(data-placeholder='Confirm Password')
                 .button-wrapper
-                    button.login-button LOGIN
-                    a.forgetbutton(href='#') Forget Password (?)
+                    button.login-button.yellow-bg Create Account
                 .button-wrapper2
                     span Don't you have any account ?
-                    button.signup-button Create
-            .col-md-8.login-wrapper2.hidden-xs
+                    button.signup-button.green-bg Log in
+            .col-md-9.login-wrapper2.hidden-xs
                 .grandient-bg
                 span.solgan Easily Accessible Personal Loan apply and receive an instant decision
                 img.wallpaper(src='../public/images/login-bg.jpg')
