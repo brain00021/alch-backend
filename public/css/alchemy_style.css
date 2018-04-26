@@ -662,7 +662,7 @@ header {
   padding-left: 1rem; }
   .current-invest .invest-detail li {
     margin-bottom: 10px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 767px) {
     .current-invest .invest-detail {
       border-left: none;
       border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -1303,7 +1303,7 @@ ul[id^=detail] {
   width: 100%;
   position: relative;
   border-bottom: 2px solid #adadad;
-  margin-bottom: 37px; }
+  margin-bottom: 30px; }
 
 .input2 {
   display: block;
@@ -1479,12 +1479,13 @@ textarea.input2 {
 
 .contact2-form-title {
   display: block;
-  font-size: 4rem;
+  font-size: 3rem;
   color: #333333;
-  line-height: 4rem;
+  line-height: 1.2;
   text-align: center;
   padding: 0 25px;
-  margin-bottom: 4rem; }
+  margin-bottom: 1rem;
+  white-space: nowrap; }
 
 .yellow-bg {
   background: #f7941d;

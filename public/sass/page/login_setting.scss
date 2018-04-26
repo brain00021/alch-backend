@@ -65,7 +65,7 @@
     width: 100%;
     position: relative;
     border-bottom: 2px solid #adadad;
-    margin-bottom: 37px;
+    margin-bottom: 30px;
 }
 
 .input2 {
@@ -238,12 +238,13 @@ textarea.input2 {
 // regrestied 
 .contact2-form-title {
     display: block;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #333333;
-    line-height:4rem;
+    line-height:1.2;
     text-align: center;
     padding:0 25px;
-    margin-bottom:4rem;
+    margin-bottom:1rem;
+    white-space: nowrap;
 }
 .yellow-bg {
     background: $orange;
